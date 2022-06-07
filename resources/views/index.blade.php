@@ -62,7 +62,7 @@
 
                                 </div>
                                 <div id="sub-icon" class="social-icons-subnav">
-                                    <a href="#"><span class="ti-user"></span></a>
+                                    <a href="#"><span class="ti-user"></span> Portal</a>
                                 </div>
                             </div>
                         </div>
@@ -286,7 +286,7 @@
                         <div class="col-md-6 onStep" data-animation="fadeIn" data-time="500">
                           <div class="sp-padding">
                             <h2 class="full">
-                                Nos somos um time <strong>criativo</strong> para construir seu sonho ou sua estrutura. 
+                                Nós somos um time <strong>criativo</strong> para construir seu sonho ou sua estrutura. 
                                 <span class="devider-cont"></span>
                             </h2>          
           
@@ -575,6 +575,18 @@
     <!-- on3step JS -->
     <script src="js/on3step.js"></script>
     <script src="js/plugin-set.js"></script>
+
+    <script>
+       var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+
+  $(window).resize(function() {
+    if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+      location.reload();
+      return;
+    }
+  });
+    </script>
 </body>
 
 </html>
