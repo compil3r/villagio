@@ -41,6 +41,27 @@
     </div>
     <!-- preloader end -->
 
+    {{-- full width menu --}}
+    <div id="portfolioDiv">
+
+        <div class="logo">
+                <img src="img/logo.png" alt="">
+        </div>
+
+        <div class="portfolioMenu">
+            <ul>
+                <li class="active"><a href="#">Cozinha</a></li>
+                <li><a href="#">Sala</a></li>
+                <li><a href="#">Lavabo</a></li>
+                <li><a href="#">Dormitório</a></li>
+                <li><a href="#">Closet</a></li>
+                <li><a href="#">Escritório</a></li>
+                <li><a href="#">Corporativo</a></li>
+            </ul>
+        </div>
+    </div>
+
+
     <!-- content wraper -->
     <div class="content-wrapper">
 
@@ -61,9 +82,7 @@
                                     <a href="#"><span>ENG</span></a>
 
                                 </div>
-                                <div id="sub-icon" class="social-icons-subnav">
-                                    <a href="#"><span class="ti-user"></span> Portal</a>
-                                </div>
+                               
                             </div>
                         </div>
 
@@ -94,26 +113,62 @@
                         <div class="white menu-init" id="main-menu">
                             <nav id="menu-center">
                                 <ul>
-                                    <li><a href="#">Início</a></li>
-                                    <li><a href="#">Sobre</a></li>
-
-                                    <li class="parent-menu"><a href="#">Projetos
-                                            <span class="hidden-md hidden-sm hidden-xs"><i
-                                                    class="fa fa-angle-down"></i></span>
-                                            <span class="hidden-lg span-drop"></span>
+                                    
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Empresa">Empresa</span>
+                                            </span>
                                         </a>
-                                        <ul>
-                                            <li><a href="about.html">Categoria 1</a></li>
-                                            <li><a href="about-2.html">Categoria 2</a></li>
-                                            <li><a href="about-4.html">Categoria 3</a></li>
-                                            <li><a href="about-1.html">Categoria 4</a></li>
-                                            <li><a href="about-3.html">Categoria 5</a></li>
-                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Produtos">Produtos</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Projetos">Projetos</span>
+                                            </span>
+                                        </a>
                                     </li>
 
 
-                                    <li><a href="contact.html">Equipe</a></li>
-                                    <li><a href="contact.html">Contato</a></li>
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Contato">Contato</span>
+                                            </span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Exclusive">Exclusive</span>
+                                            </span>
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="#" >
+                                            <span class="box">
+                                                <span data-hover="Portal"> Portal</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+
+                                   
                                 </ul>
                             </nav>
                         </div>
@@ -129,7 +184,22 @@
         <!-- home -->
         <!-- background slider -->
         <div id="home">
+            <div id="portfolioButton">
+                <svg class="house" width="30" height="40" viewBox="0 0 500 500" >
+                    <path d="M481.5,495.32h-463V212.86L250,4.68l231.5,208.19V495.32z M51.5,462.32h397V227.57L250,49.06L51.5,227.57V462.32z" opacity="1"></path><polygon points="471.19,454.43 271.58,250 471.18,45.57 449.09,24 250,227.9 50.91,24 28.82,45.57 228.42,250 28.81,454.43 50.91,476 250,272.1 449.09,476 " opacity="0">
+                    </polygon>
+                </svg>
 
+                <svg class="close" version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M20.41,86.57l28.07-37.65v3.95L22.29,17.39h5.93l23.13,31.23h-2.17l23.13-31.23h5.63L51.93,52.47v-3.36L79.8,86.57h-5.93
+                                l-24.9-33.4h2.08l-24.71,33.4H20.41z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <!-- revolution slider -->
             <section class="fullwidthbanner-container no-bottom no-top" aria-label="section-slider">
                 <div id="overlay"></div>
@@ -175,15 +245,13 @@
         <section id="about-us" class="h-bg no-padding col-content color-page">
             <div class="container-fluid">
                 <div class="row p-60">
-                    <div style="background-image: url('img/bg-about.jpeg'); background-repeat: no-repeat"
-                        class="image-container col-lg-6 hidden-md hidden-sm hidden-xs pull-left onStep"
-                        data-animation="fadeInLeft" data-time="500">
+                    <div style="background-image: url(&quot;img/bg-about.jpeg&quot;);background-repeat: no-repeat;height: 70vh;background-size: cover;" class="image-container col-lg-12 hidden-md hidden-sm hidden-xs pull-left onStep animated fadeInLeft" data-animation="fadeInLeft" data-time="500">
                         <div class="icone-play">
                             <svg x="0px" y="0px" width="136px" height="136px" viewBox="0 0 136 136" enable-background="new 0 0 136 136" xml:space="preserve"> <path fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" d="M131.417,49.657C133.098,55.481,134,61.636,134,68 c0,36.452-29.548,66-66,66S2,104.452,2,68C2,31.547,31.548,2,68,2C98.086,2,123.469,22.13,131.417,49.657"></path> <polygon fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" points="89.311,68 71.947,78.023 54.583,88.053 54.583,68 54.583,47.949 71.947,57.975 "></polygon></svg>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 p-90 onStep"  data-animation="fadeInRight" data-time="500">
+                    {{-- <div class="col-lg-6 p-90 onStep"  data-animation="fadeInRight" data-time="500">
                         <div class="sp-padding">
                             <h3 class="bg-dots">
                                 Vídeo
@@ -216,7 +284,7 @@
 
                         </div>
                         <div class="clearfix"></div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -575,7 +643,7 @@
     <!-- on3step JS -->
     <script src="js/on3step.js"></script>
     <script src="js/plugin-set.js"></script>
-
+    <script src="js/app.js"></script>
     <script>
        var windowWidth = $(window).width();
   var windowHeight = $(window).height();

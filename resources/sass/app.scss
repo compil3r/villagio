@@ -8,6 +8,10 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     letter-spacing: 0;
+    line-height: 30px;
+    padding-bottom: 0;
+    padding-top: 0;
+
 }
 
 .subnav {   
@@ -29,6 +33,11 @@ body {
 
 .white nav ul li {
     position: relative;
+    overflow: hidden;
+}
+
+.white nav ul {
+    line-height: 35px;
 }
 
 .white a::before {
@@ -46,7 +55,7 @@ body {
  z-index: -2;
  left: 20px;
  right: 100%;
- bottom: 30%;
+ bottom: 4%;
  background: #aa350e; /*** COLOR OF THE LINE ***/
  
  border-bottom: thin solid #aa350e !important;
@@ -346,4 +355,158 @@ footer {
 
 .mainpreloader span {
     border-top: 3px solid #aa350e;
+}
+
+.tparrows {
+    display: none;
+}
+
+#portfolioButton {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    padding-top: 4px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    z-index: 10000;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .close {
+        display: none;
+    }
+
+    &.active {
+        .house {
+            display: none;
+        }
+        .close {
+            display: block;
+            opacity: 1;
+            
+        }
+
+        padding: 3px;
+    }
+}
+
+#portfolioDiv {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+    background-color: rgb(30, 30, 30);
+    display: none;
+
+    .logo {
+        text-align: center;
+        margin-top: 30px;
+
+        img {
+            max-width: 200px;
+        }
+
+        opacity: 0;
+        margin-top: -40px;
+
+    }
+   
+
+    .portfolioMenu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-top: 20px;
+            color: white;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 100px;
+            padding-right: 20px;
+            position: relative;
+            z-index: 10000;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: all .5s ease-in-out;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:hover {
+                opacity: 1;
+            }
+            li {
+                margin-left: -100px;
+                opacity: 0;
+            }
+            a {
+                &:hover {
+                    color: #aa350e;
+                }
+            }
+        }
+    }
+}
+
+// just in > 1200px
+@media (min-width: 1200px) {
+    .box span::before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        content: attr(data-hover);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    
+        
+    }
+    
+    
+    
+    .box {
+        span {
+            position: relative;
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            span {
+                -webkit-transform: translateY(-100%);
+                -moz-transform: translateY(-100%);
+                -o-transform: translateY(-100%);
+                -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .white nav ul {
+        line-height: 100px;
+    }
+    
 }
