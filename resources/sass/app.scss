@@ -362,9 +362,9 @@ footer {
 }
 
 #portfolioButton {
-    width: 50px;
-    height: 50px;
-    background-color: white;
+    width: 60px;
+    height: 60px;
+    
     padding-top: 4px;
     color: white;
     position: fixed;
@@ -373,6 +373,11 @@ footer {
     cursor: pointer;
     opacity: 0.8;
     transition: all .5s ease-in-out;
+    margin-left: 70px;
+
+    .house {
+        filter: invert(100%) sepia(0%) saturate(7462%) hue-rotate(348deg) brightness(118%) contrast(104%);
+    }
 
     &:hover {
         opacity: 1;
@@ -380,6 +385,9 @@ footer {
 
     .close {
         display: none;
+        filter: invert(100%) sepia(0%) saturate(7462%) hue-rotate(348deg) brightness(118%) contrast(104%);
+
+
     }
 
     &.active {
@@ -401,7 +409,8 @@ footer {
     height: 100vh;
     position: fixed;
     z-index: 10000;
-    background-color: rgb(30, 30, 30);
+    
+    background-image: linear-gradient(#000, rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.9));
     display: none;
 
     .logo {
@@ -433,13 +442,13 @@ footer {
             overflow-y: auto;
             margin-top: 20px;
             color: white;
-            font-size: 3rem;
+            font-size: 2rem;
             font-weight: 300;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding-top: 20px;
             padding-bottom: 20px;
-            padding-left: 100px;
+            padding-left: 170px;
             padding-right: 20px;
             position: relative;
             z-index: 10000;

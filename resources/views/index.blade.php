@@ -185,7 +185,7 @@
         <!-- background slider -->
         <div id="home">
             <div id="portfolioButton">
-                <svg class="house" width="30" height="40" viewBox="0 0 500 500" >
+                <svg class="house" width="40" height="50" viewBox="0 0 500 500" >
                     <path d="M481.5,495.32h-463V212.86L250,4.68l231.5,208.19V495.32z M51.5,462.32h397V227.57L250,49.06L51.5,227.57V462.32z" opacity="1"></path><polygon points="471.19,454.43 271.58,250 471.18,45.57 449.09,24 250,227.9 50.91,24 28.82,45.57 228.42,250 28.81,454.43 50.91,476 250,272.1 449.09,476 " opacity="0">
                     </polygon>
                 </svg>
