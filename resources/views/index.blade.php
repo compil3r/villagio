@@ -27,7 +27,7 @@
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/on3step-style.css" rel="stylesheet">
     <link href="css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/app.css?v=2" rel="stylesheet">
 </head>
 
 <body class="choc">
@@ -643,7 +643,7 @@
     <!-- on3step JS -->
     <script src="js/on3step.js"></script>
     <script src="js/plugin-set.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=2"></script>
     <script>
        var windowWidth = $(window).width();
   var windowHeight = $(window).height();
