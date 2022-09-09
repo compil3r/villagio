@@ -434,3 +434,9 @@ footer img {
     line-height: 100px;
   }
 }
+#video-entrada {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
