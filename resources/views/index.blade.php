@@ -27,7 +27,7 @@
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/on3step-style.css" rel="stylesheet">
     <link href="css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/app.css?v=4" rel="stylesheet">
+    <link href="css/app.css?v=5" rel="stylesheet">
 </head>
 
 <body class="choc">
@@ -207,11 +207,10 @@
             </div>
             <!-- revolution slider -->
             <section class="fullwidthbanner-container no-bottom no-top" aria-label="section-slider">
-                <div id="overlay"></div>
                 <div class="video">
                     <div class="video__caption">
                         <div class="video__fold">
-                            <video autoplay="autoplay" preload="none" loop="loop" muted="muted" playsinline="playsinline" class="video__element play-on-load"><source src="video/otimizado.mp4" type="video/mp4"></video>					<div class="loader" style="display: none;">
+                            <video autoplay="autoplay" preload="none" loop="loop" muted="muted" playsinline="playsinline" class="video__element play-on-load"><source src="https://dellanno.com.br/site/videos/video--main.mp4" type="video/mp4"></video>					<div class="loader" style="display: none;">
                                 <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                                     <g fill="none" fill-rule="evenodd">
                                         <g transform="translate(1 1)" stroke-width="2">
