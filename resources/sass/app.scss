@@ -475,10 +475,26 @@ footer {
         }
     }
 }
+.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+.white nav ul ul {
+    display: none;
+    position: fixed;
+    top: 55px;
+    color: #efefef;
 
+    li {
+        width: 160pxr;
+        a {
+            line-height: 40px;
+        }
+    }
+}
 // just in > 1200px
 @media (min-width: 1200px) {
-    .box span::before {
+    .box div::before { 
         display: block;
         position: absolute;
         width: 100%;
@@ -497,13 +513,13 @@ footer {
     
     
     .box {
-        span {
+        div {
             position: relative;
             display: block;
             transition: all .3s ease-in-out;
         }
         &:hover {
-            span {
+            div {
                 -webkit-transform: translateY(-100%);
                 -moz-transform: translateY(-100%);
                 -o-transform: translateY(-100%);

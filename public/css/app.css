@@ -393,8 +393,26 @@ footer img {
   color: #aa350e;
 }
 
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.white nav ul ul {
+  display: none;
+  position: fixed;
+  top: 55px;
+  color: #efefef;
+}
+.white nav ul ul li {
+  width: 160pxr;
+}
+.white nav ul ul li a {
+  line-height: 40px;
+}
+
 @media (min-width: 1200px) {
-  .box span::before {
+  .box div::before {
     display: block;
     position: absolute;
     width: 100%;
@@ -403,12 +421,12 @@ footer img {
     content: attr(data-hover);
     transform: translate3d(0, 0, 0);
   }
-  .box span {
+  .box div {
     position: relative;
     display: block;
     transition: all 0.3s ease-in-out;
   }
-  .box:hover span {
+  .box:hover div {
     transform: translateY(-100%);
     cursor: pointer;
   }

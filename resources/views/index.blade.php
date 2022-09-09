@@ -116,51 +116,56 @@
                                     
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Empresa">Empresa</span>
-                                            </span>
+                                            <div class="box">
+                                                <div data-hover="Empresa">Empresa</div>
+                                            </div>
                                         </a>
                                     </li>
                                     
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Produtos">Produtos</span>
-                                            </span>
+                                            <div class="box">
+                                                <div data-hover="Produtos">Produtos</div>
+                                            </div>
                                         </a>
                                     </li>
                                     
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Projetos">Projetos</span>
-                                            </span>
+                                            <div class="box">
+                                                <div data-hover="Projetos">Projetos</div>
+                                            </div>
                                         </a>
                                     </li>
 
 
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Contato">Contato</span>
-                                            </span>
+                                            <div id="contato" class="box">
+                                                <div data-hover="Contato">Contato</div>
+                                            </div>
                                         </a>
+
+                                        <ul>
+                                            <li><a href="#">Trabalhe Conosco</a></li>
+                                            
+                                        </ul>
                                     </li>
 
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Exclusive">Exclusive</span>
-                                            </span>
+                                            <div class="box">
+                                                <div data-hover="Exclusive">Exclusive</div>
+                                            </div>
                                         </a>
                                     </li>
 
 
                                     <li>
                                         <a href="#" >
-                                            <span class="box">
-                                                <span data-hover="Portal"> Portal</span>
-                                            </span>
+                                            <div class="box">
+                                                <div data-hover="Portal"> Portal</div>
+                                            </div>
                                         </a>
                                     </li>
                                     
@@ -203,7 +208,12 @@
             <!-- revolution slider -->
             <section class="fullwidthbanner-container no-bottom no-top" aria-label="section-slider">
                 <div id="overlay"></div>
-                <div id="revolution-slider">
+                <div id="video-entrada">
+                    <video autoplay loop muted>
+                        <source src="video/entrada.mp4" type="video/mp4">
+                    </video>
+                </div>
+                {{-- <div id="revolution-slider">
                     <ul>
 
                         <li data-transition="parallaxtobottom" data-slotamount="10" data-masterspeed="1200"
@@ -235,7 +245,7 @@
 
                     </ul>
                     <div class="tp-bannertimer hide"></div>
-                </div>
+                </div> --}}
             </section>
             <!-- revolution slider end -->
 
@@ -244,13 +254,14 @@
         <!-- home end -->
         <section id="about-us" class="h-bg no-padding col-content color-page">
             <div class="container-fluid">
-                <div class="row p-60">
-                    <div style="background-image: url(&quot;img/bg-about.jpeg&quot;);background-repeat: no-repeat;height: 70vh;background-size: cover;" class="image-container col-lg-12 hidden-md hidden-sm hidden-xs pull-left onStep animated fadeInLeft" data-animation="fadeInLeft" data-time="500">
+                <div class="row p-60 justify-content-center">
+                    <div class="col-md-8">
+                    <div style="background-image: url(&quot;img/bg-about.jpeg&quot;);background-repeat: no-repeat;height: 70vh;background-size: cover;" class="image-container col-lg-12 pull-left onStep animated fadeInLeft" data-animation="fadeInLeft" data-time="500">
                         <div class="icone-play">
                             <svg x="0px" y="0px" width="136px" height="136px" viewBox="0 0 136 136" enable-background="new 0 0 136 136" xml:space="preserve"> <path fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" d="M131.417,49.657C133.098,55.481,134,61.636,134,68 c0,36.452-29.548,66-66,66S2,104.452,2,68C2,31.547,31.548,2,68,2C98.086,2,123.469,22.13,131.417,49.657"></path> <polygon fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" points="89.311,68 71.947,78.023 54.583,88.053 54.583,68 54.583,47.949 71.947,57.975 "></polygon></svg>
                         </div>
                     </div>
-
+                </div>
                     {{-- <div class="col-lg-6 p-90 onStep"  data-animation="fadeInRight" data-time="500">
                         <div class="sp-padding">
                             <h3 class="bg-dots">
@@ -646,13 +657,13 @@
     <script src="js/app.js?v=2"></script>
     <script>
        var windowWidth = $(window).width();
-  var windowHeight = $(window).height();
+       var windowHeight = $(window).height();
 
-  $(window).resize(function() {
-    if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
-      location.reload();
-      return;
-    }
+        $(window).resize(function() {
+            if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+                location.reload();
+                return;
+        }
   });
     </script>
 </body>
