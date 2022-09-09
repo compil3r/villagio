@@ -210,7 +210,7 @@
                 <div class="video">
                     <div class="video__caption">
                         <div class="video__fold">
-                            <video autoplay="autoplay" preload="none" loop="loop" muted="muted" playsinline="playsinline" class="video__element play-on-load"><source src="https://dellanno.com.br/site/videos/video--main.mp4" type="video/mp4"></video>					<div class="loader" style="display: none;">
+                            <video autoplay="autoplay" preload="none" loop="loop" muted="muted" playsinline="playsinline" class="video__element play-on-load"><source src="video/otimizado.mp4" type="video/mp4"></video>					<div class="loader" style="display: none;">
                                 <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
                                     <g fill="none" fill-rule="evenodd">
                                         <g transform="translate(1 1)" stroke-width="2">
@@ -559,7 +559,7 @@
 
     
 
-        <!-- brands-->
+        <!-- brands
         <section id="brand" aria-label="brands">
             <div class="container-fluid m-5-hor">
                 <div class="row">
@@ -619,7 +619,7 @@
                 </div>
             </div>
         </section>
-        <!-- brands end-->
+         brands end-->
 
 
         <!-- footer -->
@@ -635,7 +635,7 @@
 
                         <div class="col-md-4">
                             <span class="logo">
-                                <img alt="logo" src="img/logo-white.png">
+                                <img alt="logo" src="img/logo-preto.png">
                             </span>
                         </div>
 
@@ -671,7 +671,7 @@
     <script src="js/plugin-set.js"></script>
     <script src="js/app.js?v=2"></script>
     <script>
-       /**var windowWidth = $(window).width();
+     var windowWidth = $(window).width();
        var windowHeight = $(window).height();
 
         $(window).resize(function() {
@@ -679,7 +679,7 @@
                 location.reload();
                 return;
         }
-  });**/
+  });
     </script>
 </body>
 
