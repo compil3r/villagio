@@ -27,7 +27,7 @@
     <link href="css/owl.transitions.css" rel="stylesheet">
     <link href="css/on3step-style.css" rel="stylesheet">
     <link href="css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/app.css?v=3" rel="stylesheet">
+    <link href="css/app.css?v=4" rel="stylesheet">
 </head>
 
 <body class="choc">
@@ -208,10 +208,26 @@
             <!-- revolution slider -->
             <section class="fullwidthbanner-container no-bottom no-top" aria-label="section-slider">
                 <div id="overlay"></div>
-                <div id="video-entrada">
-                    <video autoplay loop muted>
-                        <source src="video/entrada.mp4" type="video/mp4">
-                    </video>
+                <div class="video">
+                    <div class="video__caption">
+                        <div class="video__fold">
+                            <video autoplay="autoplay" preload="none" loop="loop" muted="muted" playsinline="playsinline" class="video__element play-on-load"><source src="video/otimizado.mp4" type="video/mp4"></video>					<div class="loader" style="display: none;">
+                                <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#fff">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <g transform="translate(1 1)" stroke-width="2">
+                                            <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
+                                            <path d="M36 18c0-9.94-8.06-18-18-18">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+        
+                        <div class="video__controls">
+                            <a href="javascript:void(0);" class="video__play video__pause">Play</a>				</div>
+                    </div>
                 </div>
                 {{-- <div id="revolution-slider">
                     <ul>
@@ -656,7 +672,7 @@
     <script src="js/plugin-set.js"></script>
     <script src="js/app.js?v=2"></script>
     <script>
-       var windowWidth = $(window).width();
+       /**var windowWidth = $(window).width();
        var windowHeight = $(window).height();
 
         $(window).resize(function() {
@@ -664,7 +680,7 @@
                 location.reload();
                 return;
         }
-  });
+  });**/
     </script>
 </body>
 
