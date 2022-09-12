@@ -26,7 +26,7 @@
                     <p>
                         Dominamos todos os processos industriais e contamos com infinitas possibilidades de cores e acabamentos para que possamos oferecer o que há de melhor e mais inovador no mundo do alumínio, vidro e estrutura metálica para o setor moveleiro.
                     </p>
-                        <br>
+                       <hr>
                     <h4>Tradição</h4>
                     <p>
                         Há mais de 22 anos atuando no mercado, a Villaggio foi construída sob uma base familiar sólida, com valores baseados no respeito e no desenvolvimento humano e industrial. Prezamos nossas raízes e acreditamos que o crescimento acontece a partir de uma união perfeita entre tradição e inovação.
