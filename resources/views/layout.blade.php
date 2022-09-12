@@ -103,7 +103,7 @@
                             <span class="icon icon-bar"></span></button>
 
                         <!-- logo -->
-                        <a class="navbar-brand white" href="index.html">
+                        <a class="navbar-brand white" href="/">
                             <img class="white" alt="logo" src="img/logo.png">
                             <img class="black" alt="logo" src="img/logo.png">
                         </a>
@@ -115,7 +115,7 @@
                                 <ul>
                                     
                                     <li>
-                                        <a href="#" >
+                                        <a href="/empresa" >
                                             <div class="box">
                                                 <div data-hover="Empresa">Empresa</div>
                                             </div>
