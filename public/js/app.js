@@ -9,8 +9,24 @@
 
 // require('./bootstrap');
 $("#portfolioButton").click(function () {
-  if ($("#portfolioButton").hasClass("active")) {
-    $("#portfolioButton").removeClass("active");
+  $(".botaoPortifolio").addClass("active");
+  $("#portfolioDiv").fadeIn(function () {
+    $("#portfolioDiv .logo").animate({
+      "opacity": 1,
+      "margin-top": "20px"
+    }, 500); // li items one a one time animation 
+
+    $(".portfolioMenu ul li").each(function (index, element) {
+      $(element).delay(index * 200).animate({
+        "opacity": 1,
+        "margin-left": "0px"
+      }, 500);
+    });
+  });
+});
+$(".botaoPortifolio").click(function () {
+  if ($(".botaoPortifolio").hasClass("active")) {
+    $(".botaoPortifolio").removeClass("active");
     $(".portfolioMenu ul li").each(function (index, element) {
       $(element).delay(index * 200).animate({
         "opacity": 0,
@@ -24,21 +40,6 @@ $("#portfolioButton").click(function () {
     setTimeout(function () {
       $("#portfolioDiv").fadeOut();
     }, 1200);
-  } else {
-    $("#portfolioButton").addClass("active");
-    $("#portfolioDiv").fadeIn(function () {
-      $("#portfolioDiv .logo").animate({
-        "opacity": 1,
-        "margin-top": "20px"
-      }, 500); // li items one a one time animation 
-
-      $(".portfolioMenu ul li").each(function (index, element) {
-        $(element).delay(index * 200).animate({
-          "opacity": 1,
-          "margin-left": "0px"
-        }, 500);
-      });
-    });
   }
 });
 

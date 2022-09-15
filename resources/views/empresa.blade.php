@@ -8,14 +8,16 @@
 @endsection
 
 @section('content')
-<section id="call-action" class="col-content stripe-bg page-internal">
+<section id="call-action" class="col-content stripe-bg page-internal sobre-empresa">
     <div class="container-fluid m-5-hor">
-     <div class="row p-180">
+     <div class="row p-200">
   
                
   
                 <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
                   <div class="sp-padding">
+
+                    <h2>Saiba mais sobre <em>nós</em></h2>
                 
                     <p>               
                       
@@ -56,21 +58,60 @@
 
    <section class="no-top no-bottom">
     <div class="container-fluid">
-        <div class="row goldpage-choc">
-
-            <div class="col-lg-7 col-lg-offset-1 col-md-12 text-center">
-                <h3>Procurando por qualidade no seu próximo projeto?</h3>
+        <div class="grid">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/1.JPG')}}" alt="">
             </div>
-
-            <div class="col-lg-3  col-md-12">
-                <div class="btn-content">
-                    <span class="shine"></span>
-                    <a href="#">Fale Conosco</a>
-                </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/2.JPG')}}" alt="">
             </div>
-
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/3.JPG')}}" alt="">
+            </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/4.JPG')}}" alt="">
+            </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/5.JPG')}}" alt="">
+            </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/6.JPG')}}" alt="">
+            </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/7.JPG')}}" alt="">
+            </div>
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+                <img src="{{asset('img/colaboradores/8.JPG')}}" alt="">
+            </div>
         </div>
     </div>
 </section>
 
+@endsection
+
+@section('scripts')
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+    console.log('ué')
+    $(document).ready(function(){
+        
+        //isotop when image is loaded
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+          
+        });
+
+        $grid.imagesLoaded().progress( function() {
+            $grid.isotope('layout');
+        });
+
+
+        //animato to show on scroll 1 by 1
+        $('.onStep').each(function(){
+            $(this).appear(function() {
+                $(this).delay(100).animate({opacity:1,left:"0px"},1000);
+            });
+        });
+    });
+</script>
 @endsection
