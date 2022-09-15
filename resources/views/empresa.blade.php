@@ -95,7 +95,7 @@
     console.log('ué')
     $(document).ready(function(){
         
-        //isotop when image is loaded
+       /** //isotop when image is loaded
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
           
@@ -104,7 +104,7 @@
         $grid.imagesLoaded().progress( function() {
             $grid.isotope('layout');
         });
-
+**/
 
         //animato to show on scroll 1 by 1
         $('.onStep').each(function(){

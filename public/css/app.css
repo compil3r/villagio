@@ -579,8 +579,13 @@ footer.choc {
   font-weight: 600;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .grid-item {
-  width: 25%;
+  flex: 1 0 21%;
   padding: 10px;
   height: 300px;
   margin-bottom: -5px;
