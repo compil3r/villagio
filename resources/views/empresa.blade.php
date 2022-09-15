@@ -60,28 +60,28 @@
     <div class="container-fluid">
         <div class="grid">
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/1.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/1.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/2.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/2.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/3.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/3.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/4.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/4.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/5.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/5.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/6.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/6.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/7.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/7.jpg')}}" alt="">
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
-                <img src="{{asset('img/colaboradores/8.JPG')}}" alt="">
+                <img src="{{asset('img/colaboradores/8.jpg')}}" alt="">
             </div>
         </div>
     </div>
