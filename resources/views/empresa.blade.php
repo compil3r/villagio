@@ -59,34 +59,46 @@
    <section class="no-top no-bottom">
     <div class="container-fluid">
         <div class="grid">
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(1)">
                 <img src="{{asset('img/colaboradores/1.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(2)">
                 <img src="{{asset('img/colaboradores/2.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(3)">
                 <img src="{{asset('img/colaboradores/3.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(4)">
                 <img src="{{asset('img/colaboradores/4.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(5)">
                 <img src="{{asset('img/colaboradores/5.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(6)">
                 <img src="{{asset('img/colaboradores/6.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(7)">
                 <img src="{{asset('img/colaboradores/7.jpg')}}" alt="">
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(8)">
                 <img src="{{asset('img/colaboradores/8.jpg')}}" alt="">
             </div>
         </div>
     </div>
 </section>
 
+@endsection
+
+@section('modal')
+<div class="modal fade" id="modalImagem" tabindex="-1" role="dialog" aria-labelledby="modalImagemLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" alt="" id="imagemModal">
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection
 
 @section('scripts')
@@ -112,6 +124,12 @@
                 $(this).delay(100).animate({opacity:1,left:"0px"},1000);
             });
         });
+
+        modalImagem(id){
+            console.log(id)
+            $('#modalImagem').modal('show')
+            $('#modalImagem').find('img').attr('src', `{{asset('img/colaboradores/${id}.jpg')}}`)
+        }
     });
 </script>
 @endsection
