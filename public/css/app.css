@@ -601,3 +601,117 @@ footer.choc {
 .grid-item:hover img {
   filter: grayscale(0%);
 }
+
+#modalImagem {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+}
+#modalImagem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#modalImagem .modal-content {
+  border: none;
+}
+#modalImagem .modal-body {
+  padding: 0;
+}
+#modalImagem .modal-dialog {
+  max-width: 100%;
+  margin: 0;
+}
+#modalImagem .modal-header {
+  display: none;
+}
+
+.timeline .years {
+  display: flex;
+  padding: 0 25%;
+  height: 100px;
+  color: #888888;
+}
+.timeline .years li {
+  flex: 1;
+  font-family: "Playfair Display", serif;
+  list-style: none;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  border-bottom: 1px solid #888888;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.timeline .years li.active {
+  border-bottom: 2px solid #000;
+  font-weight: 700;
+  font-size: 2.5em;
+  color: rgb(20, 20, 20);
+}
+.timeline .year {
+  color: #888888;
+  text-align: right;
+  padding: 0 5%;
+  margin-top: 61px;
+}
+.timeline .year .content {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: transfor;
+  position: absolute;
+  /* max-width: 275px; */
+  /* min-height: 200px; */
+  /* top: 33px; */
+  margin-top: 55px;
+  right: calc(50% - 68px);
+  background: #fff;
+  box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+}
+.timeline .year .content .title {
+  left: -100px;
+  bottom: auto;
+  top: 33px;
+  transform-origin: initial;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 9%;
+  bottom: -5px;
+  width: 250px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.timeline .year .content .title::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background: #888888;
+  margin-left: 20px;
+}
+.timeline .year .content .text {
+  line-height: 17px;
+  font-size: 1.2rem;
+  display: block;
+  margin-left: 75px;
+  max-width: 158px;
+  margin-top: 31px;
+}
+.timeline .year .image {
+  width: 50%;
+  display: inline-block;
+}
+.timeline .year .image img {
+  width: 100%;
+}

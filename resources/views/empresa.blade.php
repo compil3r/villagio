@@ -17,7 +17,7 @@
                 <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
                   <div class="sp-padding">
 
-                    <h2>Saiba mais sobre <em>nós</em></h2>
+                    <h2>Saiba mais sobre <em>quem somos</em></h2>
                 
                     <p>               
                       
@@ -87,6 +87,39 @@
     </div>
 </section>
 
+
+<section class="timeline">
+    <div class="container-fluid">
+        <ul class="years">
+            <li class="active" data-year="2000">2000</li>
+            <li data-year="2006">2006</li>
+            <li data-year="2007">2007</li>
+            <li data-year="2010">2010</li>
+            <li data-year="2011">2011</li>
+            <li data-year="2017">2017</li>
+            <li data-year="2018">2018</li>
+            <li data-year="2019">2019</li>
+            <li data-year="2020">2020</li>
+            <li data-year="2022">2022</li>
+        </ul>
+
+        <div class="year">
+            <div class="content">
+                <div class="title">2000</div>
+                <div class="text">
+                    <p>
+                        Em janeiro nasce a Villaggio, uma empresa de representação comercial de acessórios para móveis.
+                    </p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="{{asset('img/bg-serv-1.jpeg')}}" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
 @endsection
 
 @section('modal')
@@ -125,11 +158,70 @@
             });
         });
 
-        modalImagem(id){
+    });
+
+    
+    modalImagem = function(id){
             console.log(id)
             $('#modalImagem').modal('show')
             $('#modalImagem').find('img').attr('src', `{{asset('img/colaboradores/${id}.jpg')}}`)
         }
-    });
+
+        //timeline
+
+        let years = {
+            2000: {
+                title: '2000',
+                text: 'Em janeiro nasce a Villaggio, uma empresa de representação comercial de acessórios para móveis.'
+            },
+            2006: {
+                title: '2006',
+                text: 'Inauguração da primeira loja Villaggio no centro de Novo Hamburgo, iniciando a distribuição de acessórios para móveis no Vale dos Sinos.'
+            },
+            2007: {
+                title: '2007',
+                text: 'A Villaggio abre em Ivoti o primeiro parque industrial, iniciando a fabricação própria de suas primeiras portas de alumínio.'
+            },
+            2010: {
+                title: '2010',
+                text: 'Com a aquisição de novas máquinas, deu-se início ao beneficiamento e comercialização de vidros lapidados.'
+            },
+            2011: {
+                title: '2011',
+                text: 'Participação da primeira feira FIMMA, iniciando sua expansão nacional.'
+            },
+            2017: {
+                title: '2017',
+                text: 'Início da construção de uma nova sede em Ivoti, com um moderno parque fabril de 4.800m².'
+            },
+            2018: {
+                title: '2018',
+                text: 'Lançamento da Linha Del Metallo, agregando a indústria a fabricação de estruturas metálicas produzidas em aço carbono.'
+            },
+            2019: {
+                title: '2019',
+                text: 'Lançamento da Personi, uma marca voltada a construção civil, promovendo soluções em esquadrias de alumínio para o alto padrão.'
+            },
+            2020: {
+                title: '2020',
+                text: 'Mudança para o novo parque industrial do grupo ADR Design.'
+            },
+            2022: {
+                title: '2022',
+                text: 'Ano de reestruturação, o grupo ADR Design unifica as suas marcas tornando-se apenas VILLAGGIO, e lançando a Villaggio Arch l Home, marca voltada aos franqueados.'
+            },
+        }
+
+        $('.years li').click(function(){
+            $('.years li').removeClass('active')
+            $(this).addClass('active')
+
+            let year = $(this).data('year')
+
+            $('.year .content .title').html(years[year].title)
+            $('.year .content .text').html(years[year].text)
+            $('.year .image img').attr('src', `{{asset('img/bg-serv-2.jpeg')}}`)
+
+        })
 </script>
 @endsection

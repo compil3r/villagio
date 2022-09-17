@@ -167,7 +167,7 @@
             </div>
            </section>
 
-           <section class="no-top no-bottom">
+        <section class="no-top no-bottom">
             <div class="container-fluid">
                 <div class="row goldpage-choc">
 
@@ -185,7 +185,10 @@
                 </div>
             </div>
         </section>
-    
+
+        
+      
+
 
 
         <!-- gallery -->
@@ -305,7 +308,6 @@
             </div>
         </section>
         <!-- gallery end -->
-
 
 
 @endsection
