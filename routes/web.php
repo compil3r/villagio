@@ -20,3 +20,12 @@ Route::get('/', function () {
 Route::get('/empresa', function() {
     return view('empresa');
 });
+
+
+Route::get('/produtos', function() {
+    return view('produtos');
+});
+
+Route::get('/produtos/detalhes', function() {
+    return view('produtos-detalhes');
+});
