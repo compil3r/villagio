@@ -910,3 +910,98 @@ footer.choc {
 
     }
  }
+
+
+ footer {
+    text-align: left;
+    .txtBig {
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .socialContainer {
+        margin: 15px 0 0 -10px;
+
+        a {
+            position: relative;
+            display: inline-block;
+            height: 14px;
+            margin: 0 6px;
+            cursor: pointer;
+
+            svg {
+                height: 14px;
+            }
+        }
+    }
+
+
+    #footerLine {
+        height: 76px;
+    padding: 35px 0 40px;
+    clear: both;
+
+    .line {
+        width: 102px;
+        height: 1px;
+        background: dimgray;
+    }
+    }
+
+    #navFooterContainer {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .navFooter {
+        font-size: 8pt;
+        text-transform: uppercase;
+        font-weight: 400;
+        float: left;
+        li:first-child {
+            padding-left: 0;
+            margin-left: 0;
+            border-left: none;
+        }
+
+        li  {
+            padding-left: 10px;
+            margin-left: 10px;
+            border-left: #8d8d8d 1px solid;
+            float: left;
+            line-height: 10px;
+
+            a {    position: relative;
+                display: block;
+                padding: 0px;
+                text-decoration: solid;
+
+                &:hover {
+                    color: #000;
+                    background-color: none;
+                    background: none;
+                }
+            }
+        }
+        
+    }
+
+    .spacer40 {
+        height: 40px;
+        width: 100%;
+        content: " ";
+        display: table;
+        clear: both;
+    }
+
+    .address {
+        p {
+            font-size: 9pt;
+            font-weight: 400;
+        }
+    }
+
+
+ }
