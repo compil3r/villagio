@@ -26,6 +26,10 @@ Route::get('/produtos', function() {
     return view('produtos');
 });
 
+Route::get('/grupo-de-produtos', function() {
+    return view('grupo-de-produtos');
+});
+
 Route::get('/produtos/detalhes', function() {
     return view('produtos-detalhes');
 });

@@ -2,8 +2,8 @@
 @section('header')
     <div class="image-header">
         <div id="overlay" class="bottom"></div>
-        <img src="{{asset('img/bg-serv-1.jpeg')}}" alt="">
-        <h3>Produtos</h3>
+        <img src="{{asset('img/produtos/cabina.png')}}" alt="">
+        <h3>Soluções Inteligentes</h3>
     </div>
 @endsection
 
@@ -17,7 +17,7 @@
                 <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
                   <div class="sp-padding">
 
-                    <h2>Conheça os nossos <em>produtos</em></h2>
+                    <h2>Soluções Inteligentes</h2>
                 
                     <p>               
                       
@@ -37,51 +37,51 @@
     <div class="container-fluid">
         <div class="grid produtos">
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/solucoes.png')}}" alt="">
+                <img src="{{asset('img/produtos/cabina.png')}}" alt="">
                 <div class="legenda">
-                    <p>Soluções Inteligentes</p>
+                    <p>Cabina Di Vetro</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/perfis.png')}}" alt="">
+                <img src="{{asset('img/produtos/painel.png')}}" alt="">
                 <div class="legenda">
-                    <p>Perfis para Portas</p>
+                    <p>Painel Movie</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/puxadores.png')}}" alt="">
+                <img src="{{asset('img/produtos/porta_movie.png')}}" alt="">
                 <div class="legenda">
-                    <p>Puxadores</p>
+                    <p>Porta Movie</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/divisorias.png')}}" alt="">
+                <img src="{{asset('img/produtos/scaffale.png')}}" alt="">
                 <div class="legenda">
-                    <p>Divisórias de Ambientes</p>
+                    <p>Scaffale</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/acessorios.png')}}" alt="">
+                <img src="{{asset('img/produtos/adega.png')}}" alt="">
                 <div class="legenda">
-                    <p>Acessórios</p>
+                    <p>Adega</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/acabamentos.png')}}" alt="">
+                <img src="{{asset('img/produtos/del_metallo.png')}}" alt="">
                 <div class="legenda">
-                    <p>Acabamentos</p>
+                    <p>Del Metallo</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/sistemas.png')}}" alt="">
+                <img src="{{asset('img/produtos/luce_redondo.png')}}" alt="">
                 <div class="legenda">
-                    <p>Sistemas</p>
+                    <p>Espelho Luce Redondo</p>
                 </div>
             </div>
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/destaque/esquadrias.png')}}" alt="">
+                <img src="{{asset('img/produtos/luce_retangular.png')}}" alt="">
                 <div class="legenda">
-                    <p>Esquadrias</p>
+                    <p>Espelho Luce Retangular</p>
                 </div>
             </div>
         </div>
@@ -91,47 +91,10 @@
 
 
 @endsection
-
-@section('modal')
-<div class="modal fade" id="modalImagem" tabindex="-1" role="dialog" aria-labelledby="modalImagemLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-body">
-          <img src="" alt="" id="imagemModal">
-        </div>
-      </div>
-    </div>
-  </div>
-@endsection
-
 @section('scripts')
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script>
-    console.log('ué')
-    $(document).ready(function(){
-        
-       /** //isotop when image is loaded
-        var $grid = $('.grid').isotope({
-            itemSelector: '.grid-item',
-          
-        });
-
-        $grid.imagesLoaded().progress( function() {
-            $grid.isotope('layout');
-        });
-**/
-
-        //animato to show on scroll 1 by 1
-        $('.onStep').each(function(){
-            $(this).appear(function() {
-                $(this).delay(100).animate({opacity:1,left:"0px"},1000);
-            });
-        });
-
-    });
-
     function irParaProduto(){
-        window.location.href = "{{url('grupo-de-produtos')}}";
+        window.location.href = "{{url('produtos/detalhes')}}";
     }
 </script>
 @endsection

@@ -866,6 +866,8 @@ footer.choc {
         img {
             transition: all .3s ease-in-out;
             transform: scale(1.2);
+            filter: grayscale(0%);
+
         }
 
         .legenda {
@@ -1004,4 +1006,32 @@ footer.choc {
     }
 
 
+ }
+
+ .detalhes-produto {
+    font-size: unset !important;
+    .logo {
+        text-align: center;
+        margin-top: 20px;
+        img{
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+    }
+
+    
+ }
+
+ 
+ footer {
+    .position-relative {
+        position: relative;
+    }
+
+    .logo-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
  }

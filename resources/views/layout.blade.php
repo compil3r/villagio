@@ -11,26 +11,27 @@
     <!-- favicon -->
     <link href="img/favicon.png" rel="icon" sizes="32x32" type="image/png">
     <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- font themify CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <!-- font awesome CSS -->
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+  
     <!-- revolution slider css -->
-    <link rel="stylesheet" type="text/css" href="css/fullscreen.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-    <link rel="stylesheet" href="css/rev-settings.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/fullscreen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />
+    <link rel="stylesheet" href="/css/rev-settings.css" type="text/css">
     <!-- on3step CSS -->
-    <link href="css/animated-on3step.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.theme.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/on3step-style.css" rel="stylesheet">
-    <link href="css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/app.css?v=9" rel="stylesheet">
+    <link href="/css/animated-on3step.css" rel="stylesheet">
+    <link href="/css/owl.carousel.css" rel="stylesheet">
+    <link href="/css/owl.theme.css" rel="stylesheet">
+    <link href="/css/owl.transitions.css" rel="stylesheet">
+    <link href="/css/on3step-style.css" rel="stylesheet">
+    <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
+    <link href="/css/app.css?v=10" rel="stylesheet">
 </head>
+{{-- se houver flag adicionar class "show" em body --}}
 
-<body class="choc">
+
+<body class="choc ">
 
     <!-- preloader -->
     <div class="bg-preloader-white"></div>
@@ -65,7 +66,7 @@
     <!-- content wraper -->
     <div class="content-wrapper">
 
-        <header class="init choc">
+        <header class="init choc @yield('classHeader', '')">
 
             <!-- subnav -->
             <div class="container-fluid m-5-hor">
@@ -80,7 +81,8 @@
                                     <a href="#"><span>PT</span></a>
                                     <a href="#"><span>ES</span></a>
                                     <a href="#"><span>ENG</span></a>
-
+            
+                                    <a href="#"><span class="ti-user"></span></a>
                                 </div>
                                
                             </div>
@@ -104,8 +106,8 @@
 
                         <!-- logo -->
                         <a class="navbar-brand white" href="/">
-                            <img class="white" alt="logo" src="img/logo.png">
-                            <img class="black" alt="logo" src="img/logo.png">
+                            <img class="white" alt="logo" src="/img/logo.png">
+                            <img class="black" alt="logo" src="/img/logo.png">
                         </a>
                         <!-- logo end -->
 
@@ -215,7 +217,7 @@
         <footer class="choc">
             <div class="container-fluid m-5-hor">
                 <!-- animate row -->
-                <div class="row">
+                <div class="row position-relative">
                     <div class="col-xs-12 col-sm-9">
                         <div class="row onStep" data-animation="fadeIn" data-time="500">
                             <div class="col-xs-12">
@@ -307,7 +309,7 @@
                             </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-3">
+                    <div class="col-xs-12 col-sm-3 logo-container">
                         <img src="{{asset('img/logo-preto.png')}}" alt="">
                     </div>
                 </div>
@@ -330,17 +332,17 @@
    @yield('modal')
     <!-- /#modal-video -->
     <!-- plugin JS -->
-    <script src="plugin/pluginson3step.js"></script>
-    <script src="plugin/sticky.js"></script>
+    <script src="/plugin/pluginson3step.js"></script>
+    <script src="/plugin/sticky.js"></script>
     <!-- slider revolution  -->
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
     <!-- on3step JS -->
-    <script src="js/on3step.js"></script>
-    <script src="js/plugin-set.js"></script>
+    <script src="/js/on3step.js"></script>
+    <script src="/js/plugin-set.js"></script>
     <!-- bootstrap script -->
-    <script src="plugin/bootstrap.min.js"></script>
-    <script src="js/app.js?v=2"></script>
+    <script src="/plugin/bootstrap.min.js"></script>
+    <script src="/js/app.js?v=2"></script>
     
     <script>
      var windowWidth = $(window).width();
