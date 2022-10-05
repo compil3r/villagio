@@ -57,8 +57,9 @@
                 <div class="ProductDetails_productDetailsContainer__zMch2">
                     <div class="ProductDetails_productDetailsTop__9MVAI">
                         <div class="Breadcrumbs_breadcrumbsContainer__I4T2S">
-                            <a class="Breadcrumbs_breadcrumbsItem__frSck" href="/">Home</a><span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span><a class="Breadcrumbs_breadcrumbsItem__frSck" href="/grupos-de-produtos/solucoes-inteligentes">Soluções Inteligentes</a>
-                            <span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span><a class="Breadcrumbs_breadcrumbsItem__frSck" href="#">Cabina Di Vetro</a>
+
+                            <a class="Breadcrumbs_breadcrumbsItem__frSck" href="/">Home</a><span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span><a class="Breadcrumbs_breadcrumbsItem__frSck" href="/grupo-de-produtos/{{$produto->categoria}}">{{$produto->categoria_completa}}</a>
+                            <span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span><a class="Breadcrumbs_breadcrumbsItem__frSck" href="#">{{$produto->titulo}}</a>
                             <span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span>
                         </div>
                         <div class="ProductDetails_productDetailsSliderControls__AXo9_">
@@ -128,20 +129,25 @@
                             <div class="carousel-root">
                                 <div class="carousel carousel-slider" style="width: 100%;">
                                     <div class="slider-wrapper axis-horizontal">
-                                      <img src="{{asset('img/produtos/cabina.png')}}" >
+
+                                      <img src="{{asset('img/uploads/' . $produto->imagem)}}" >
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="ProductDetails_productDetailsInfo__rPvyX">
-                        <div class="ProductDetails_productDetailsInfoRow__sLjMj"><h1 class="ProductDetails_productDetailsInfoLabel__Kb7qU">Cabina Di Vetro</h1></div>
+                        <div class="ProductDetails_productDetailsInfoRow__sLjMj"><h1 class="ProductDetails_productDetailsInfoLabel__Kb7qU">{{$produto->titulo}}</h1></div>
                         <br>
-                        <strong>Armário de Vidro e Aluminio</strong>
+                        @if($produto->subtitulo)
+                        <strong>{{$produto->subtitulo}}</strong>
                         <br><br>
-                        <p>A Cabina di Vetro permite criar composições lineares ou de canto perfeitamente adaptadas, com acesso integrado em roupeiros ou áreas de serviço. Sistema de armazenamento de última geração, com estruturas 100% em vidro e alumínio, onde todos os componentes são feitos sob medida e adaptáveis aos espaços com a máxima precisão.</p>
+                        @endif
+                        <p>{!!$produto->descricao!!}</p>
 
                     </div>
+                    @foreach($produto->imagens as $imagem)
+
                     <div class="ProductDetails_productDetailsLinks__c6tg8 ProductDetails_productDetailsLinksWithImage__dtlEG">
                         <div class="ImageBackground_imageBackground__SJ3M3 ImageBackground_imageBackgroundPlaceholder__Fc_CO ProductDetails_productDetailsImage__bD35o">
                             <span
@@ -165,7 +171,7 @@
                             >
                                 <img
                                     alt="Detail image"
-                                    src="{{asset('img/produtos/cabina_detalhe.jpg')}}"
+                                    src="{{asset('img/uploads/' . $imagem->imagem)}}"
                                     decoding="async"
                                     data-nimg="fill"
                                     class="Image_image__7bYel Image_imageLoaded__WPgjZ"
@@ -199,62 +205,8 @@
                         </div>
                     </div>
 
-                    <div class="ProductDetails_productDetailsLinks__c6tg8 ProductDetails_productDetailsLinksWithImage__dtlEG">
-                        <div class="ImageBackground_imageBackground__SJ3M3 ImageBackground_imageBackgroundPlaceholder__Fc_CO ProductDetails_productDetailsImage__bD35o">
-                            <span
-                                style="
-                                    box-sizing: border-box;
-                                    display: block;
-                                    overflow: hidden;
-                                    width: initial;
-                                    height: initial;
-                                    background: none;
-                                    opacity: 1;
-                                    border: 0;
-                                    margin: 0;
-                                    padding: 0;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    bottom: 0;
-                                    right: 0;
-                                "
-                            >
-                                <img
-                                    alt="Detail image"
-                                    src="{{asset('img/produtos/cabina_detalhe_2.jpg')}}"
-                                    decoding="async"
-                                    data-nimg="fill"
-                                    class="Image_image__7bYel Image_imageLoaded__WPgjZ"
-                                    style="
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        bottom: 0;
-                                        right: 0;
-                                        box-sizing: border-box;
-                                        padding: 0;
-                                        border: none;
-                                        margin: auto;
-                                        display: block;
-                                        width: 0;
-                                        height: 0;
-                                        min-width: 100%;
-                                        max-width: 100%;
-                                        min-height: 100%;
-                                        max-height: 100%;
-                                        object-fit: cover;
-                                        object-position: center center;
-                                    "
-                                    sizes="100vw"
-                                 
-                                />
-                                
-                            </span>
-
-                            
-                        </div>
-                    </div>
+                    @endforeach
+                   
                 </div>
             </section>
         </main>

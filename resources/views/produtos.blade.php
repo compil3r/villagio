@@ -36,13 +36,13 @@
    <section class="no-top no-bottom">
     <div class="container-fluid">
         <div class="grid produtos">
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('solucoes-inteligentes')">
                 <img src="{{asset('img/produtos/destaque/solucoes.png')}}" alt="">
                 <div class="legenda">
                     <p>Soluções Inteligentes</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('perfis-para-portas')">
                 <img src="{{asset('img/produtos/destaque/perfis.png')}}" alt="">
                 <div class="legenda">
                     <p>Perfis para Portas</p>
@@ -130,8 +130,9 @@
 
     });
 
-    function irParaProduto(){
-        window.location.href = "{{url('grupo-de-produtos')}}";
+    function irParaProduto(categoria){
+        console.log(categoria)
+        window.location.href = "grupo-de-produtos/" + categoria;
     }
 </script>
 @endsection

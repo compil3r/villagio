@@ -352,7 +352,6 @@ footer img {
 }
 #portfolioDiv .logo {
   text-align: center;
-  margin-top: 30px;
   opacity: 0;
   margin-top: -40px;
 }
@@ -664,7 +663,6 @@ footer.choc {
 .timeline .year .content {
   width: 250px;
   height: 250px;
-  position: absolute;
   right: transfor;
   position: absolute;
   /* max-width: 275px; */

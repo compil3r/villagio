@@ -32,58 +32,17 @@
      </div>
     </div>
    </section>
-
    <section class="no-top no-bottom">
     <div class="container-fluid">
         <div class="grid produtos">
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/cabina.png')}}" alt="">
+            @foreach ($produtos as $produto)
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('{{$produto->slug}}')">
+                <img src="{{asset('img/uploads/'.$produto->imagem)}}" alt="">
                 <div class="legenda">
-                    <p>Cabina Di Vetro</p>
+                    <p>{{$produto->titulo}}</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/painel.png')}}" alt="">
-                <div class="legenda">
-                    <p>Painel Movie</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/porta_movie.png')}}" alt="">
-                <div class="legenda">
-                    <p>Porta Movie</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/scaffale.png')}}" alt="">
-                <div class="legenda">
-                    <p>Scaffale</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/adega.png')}}" alt="">
-                <div class="legenda">
-                    <p>Adega</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/del_metallo.png')}}" alt="">
-                <div class="legenda">
-                    <p>Del Metallo</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/luce_redondo.png')}}" alt="">
-                <div class="legenda">
-                    <p>Espelho Luce Redondo</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
-                <img src="{{asset('img/produtos/luce_retangular.png')}}" alt="">
-                <div class="legenda">
-                    <p>Espelho Luce Retangular</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -93,8 +52,8 @@
 @endsection
 @section('scripts')
 <script>
-    function irParaProduto(){
-        window.location.href = "{{url('produtos/detalhes')}}";
+    function irParaProduto(produto){
+        window.location.href = '/produto/'+produto;
     }
 </script>
 @endsection

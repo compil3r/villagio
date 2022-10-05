@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('index');
 });
@@ -26,10 +25,26 @@ Route::get('/produtos', function() {
     return view('produtos');
 });
 
-Route::get('/grupo-de-produtos', function() {
-    return view('grupo-de-produtos');
+Route::get('/grupo-de-produtos/{categoria}', [App\Http\Controllers\CategoriaController::class, 'index'])->name('grupo-de-produtos');
+
+Route::get('/produto/{slug}', [App\Http\Controllers\ProdutosController::class, 'index'])->name('produto');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
+//route to dashboard/produtos
+
+
+//dashboard produtos all routes with prefix dashboard/produtos
+Route::prefix('dashboard/produtos')->middleware(['auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\Dashboard\ProdutosController::class, 'index'])->name('dashboard.produtos.index');
+    Route::get('/create', [App\Http\Controllers\Dashboard\ProdutosController::class, 'create'])->name('dashboard.produtos.create');
+    Route::post('/store', [App\Http\Controllers\Dashboard\ProdutosController::class, 'store'])->name('dashboard.produtos.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\Dashboard\ProdutosController::class, 'edit'])->name('dashboard.produtos.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\Dashboard\ProdutosController::class, 'update'])->name('dashboard.produtos.update');
+    Route::delete('/destroy/{id}', [App\Http\Controllers\Dashboard\ProdutosController::class, 'destroy'])->name('dashboard.produtos.destroy');
 });
 
-Route::get('/produtos/detalhes', function() {
-    return view('produtos-detalhes');
-});
+require __DIR__.'/auth.php';
