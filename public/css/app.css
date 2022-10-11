@@ -23,6 +23,16 @@ body {
   padding-bottom: 20px;
 }
 
+.no-section-image .subnav {
+  border-bottom: 1px solid #202020;
+}
+.no-section-image .subnav a {
+  color: #202020;
+}
+.no-section-image .subnav a span {
+  color: #202020;
+}
+
 .social-icons-subnav span {
   font-weight: 400;
   letter-spacing: 0;
@@ -82,6 +92,27 @@ body {
 
 .white li li a:before {
   bottom: 10%;
+}
+
+.no-section-image .white li a, .no-section-image .white li a:hover, .no-section-image .white li a.actived {
+  color: black;
+}
+.no-section-image .white li a:before {
+  background: black;
+  border-bottom: thin solid black !important;
+}
+.no-section-image .sticky .white li a, .no-section-image .sticky .white li a:hover, .no-section-image .sticky .white li a.actived {
+  color: white;
+}
+.no-section-image .sticky .white li a:before {
+  background: white;
+  border-bottom: thin solid white !important;
+}
+.no-section-image .sticky .white img.white {
+  display: none;
+}
+.no-section-image .sticky .white img.black {
+  display: block;
 }
 
 #overlay {
@@ -428,6 +459,12 @@ footer img {
     left: 0;
     content: attr(data-hover);
     transform: translate3d(0, 0, 0);
+  }
+  .no-section-image .box div::before {
+    color: black;
+  }
+  .no-section-image .sticky .box div::before {
+    color: white;
   }
   .box div {
     position: relative;

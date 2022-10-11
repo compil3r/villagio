@@ -1,11 +1,4 @@
-@extends('layout')
-@section('header')
-    <div class="image-header">
-        <div id="overlay" class="bottom"></div>
-        <img src="{{asset('img/produtos/cabina.png')}}" alt="">
-        <h3>Soluções Inteligentes</h3>
-    </div>
-@endsection
+@extends('layout_fixo')
 
 @section('content')
 <section id="call-action" class="col-content stripe-bg page-internal sobre-empresa">
@@ -17,7 +10,7 @@
                 <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
                   <div class="sp-padding">
 
-                    <h2>Soluções Inteligentes</h2>
+                    <h2>{{$nome}}</h2>
                 
                     <p>               
                       

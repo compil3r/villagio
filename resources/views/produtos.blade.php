@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout_fixo')
 @section('header')
     <div class="image-header">
         <div id="overlay" class="bottom"></div>
