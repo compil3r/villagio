@@ -26,7 +26,7 @@
     <link href="/css/owl.transitions.css" rel="stylesheet">
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/css/app.css?v=10" rel="stylesheet">
+    <link href="/css/app.css?v=11" rel="stylesheet">
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 

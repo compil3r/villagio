@@ -621,7 +621,8 @@ footer.choc {
 }
 
 .grid-item {
-  flex: 1 0 21%;
+  flex: 1 0 33%;
+  border: 10px solid white;
   padding: 10px;
   height: 300px;
   margin-bottom: -5px;
