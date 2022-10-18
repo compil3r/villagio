@@ -2,7 +2,7 @@
 @section('header')
     <div class="image-header">
         <div id="overlay" class="bottom"></div>
-        <img src="{{asset('img/bg-serv-1.jpeg')}}" alt="">
+        <img src="{{asset('img/empresa.jpg')}}" alt="">
         <h3>Empresa</h3>
     </div>
 @endsection
