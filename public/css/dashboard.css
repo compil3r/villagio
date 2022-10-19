@@ -1067,11 +1067,14 @@ select {
 .fill-current {
   fill: currentColor;
 }
-.p-60 {
-  padding: 15rem;
+.p-20 {
+  padding: 5rem;
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-60 {
+  padding: 15rem;
 }
 .p-2 {
   padding: 0.5rem;
@@ -1142,6 +1145,9 @@ select {
 }
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pb-0 {
+  padding-bottom: 0px;
 }
 .text-left {
   text-align: left;

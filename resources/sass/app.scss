@@ -1092,3 +1092,48 @@ footer.choc {
         bottom: 0;
     }
  }
+
+ .bg-dots {
+    width: 400px;
+ }
+.white-bg {
+    background-color: white !important;
+}
+ .imagem-produtos-container {
+    width: 100%;
+    
+    .img-item {
+        width: 100%;
+    
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 650px;
+    }
+
+    .owl-controls {
+        margin-top: -30px;
+
+        .active {
+            span {
+                opacity: 0.9 !important;
+                border: thin solid black;
+                background-color: transparent;
+            }
+        }
+
+        .owl-page {
+            span {
+                width: 8px;
+                height: 8px;
+            }
+            &:hover {
+                span {
+                    opacity: 0.9 !important;
+                    border: thin solid black;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+ }

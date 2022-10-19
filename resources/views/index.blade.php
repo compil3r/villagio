@@ -25,53 +25,29 @@
 @section('content')
         <section id="about-us" class="h-bg no-padding col-content">
             <div class="container-fluid">
-                <div class="row p-60 justify-content-center">
-                    <div class="col-md-8">
-                    <div style="background-image: url(&quot;img/institucional.png&quot;);background-repeat: no-repeat;height: 70vh;background-size: cover;" class="image-container col-lg-12 pull-left onStep animated fadeInLeft" data-animation="fadeInLeft" data-time="500">
-                        <div id="icone-play" class="icone-play">
-                            <svg x="0px" y="0px" width="136px" height="136px" viewBox="0 0 136 136" enable-background="new 0 0 136 136" xml:space="preserve"> <path fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" d="M131.417,49.657C133.098,55.481,134,61.636,134,68 c0,36.452-29.548,66-66,66S2,104.452,2,68C2,31.547,31.548,2,68,2C98.086,2,123.469,22.13,131.417,49.657"></path> <polygon fill="none" stroke="#000" stroke-width="0.6" stroke-miterlimit="10" points="89.311,68 71.947,78.023 54.583,88.053 54.583,68 54.583,47.949 71.947,57.975 "></polygon></svg>
-                        </div>
-                    </div>
-                </div>
-                    {{-- <div class="col-lg-6 p-90 onStep"  data-animation="fadeInRight" data-time="500">
-                        <div class="sp-padding">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 onStep"  data-animation="fadeInRight" data-time="500">
+                        <div class="sp-padding pb-0">
                             <h3 class="bg-dots">
-                                Vídeo
-                                Chamada
+                                Alguma Chamada de Escolha
                                 <span class="devider-cont"></span>
                             </h3>
-
-                            <p>
-                                Aqui ficará um vídeo que pode ser usado para divulgar a empresa ou ainda apresentar algum novo projeto.
-                                Junto com ele poderia ficar um texto e até mesmo algumas métricas. Sed ut perspiciatis unde omnis iste natus
-                                errorsit voluptatem accusantium natus error sit.Mauris interdum libero vitae tellus
-                                vestibulum, nec sollicitudin dui mollis.</p>
-
-                            <div class="count-about">
-                                <span class="numb">365</span>
-                                <span class="detail">Projetos</span>
-                            </div>
-                            <div class="count-about">
-                                <span class="numb">120</span>
-                                <span class="detail">Clientes</span>
-                            </div>
-                            <div class="count-about">
-                                <span class="numb">363</span>
-                                <span class="detail">Entregas</span>
-                            </div>
-                            <div class="count-about">
-                                <span class="numb">6</span>
-                                <span class="detail">Anos</span>
+                            
+                            <div class="owl-carousel imagem-produtos-container">
+                                <div class="img-item" id="produto1" style="background-image: url({{asset('img/produtos/slide/1.png')}})" ></div>
+                                <div class="img-item" id="produto2" style="background-image: url({{asset('img/produtos/slide/2.JPG')}})" ></div>
+                                <div class="img-item" id="produto3" style="background-image: url({{asset('img/produtos/slide/3.jpg')}})" ></div>
+                                <div class="img-item" id="produto4" style="background-image: url({{asset('img/produtos/slide/4.png')}})" ></div>
                             </div>
 
                         </div>
                         <div class="clearfix"></div>
-                    </div> --}}
+                    </div>
 
                 </div>
             </div>
         </section>
-        <!-- section -->
+        {{-- <!-- section -->
         <section class="choc-features no-bottom no-top no-padding">
 
             <!-- text -->
@@ -124,45 +100,30 @@
                 </div>
             </div>
         </section>
-        <!-- section end -->
+        <!-- section end --> --}}
 
 
-        <section id="call-action" class="col-content stripe-bg">
+        <section id="call-action" class="col-content white-bg">
             <div class="container-fluid m-5-hor">
              <div class="row p-180">
-          
-                       
-          
-                        <div class="col-md-6 onStep" data-animation="fadeIn" data-time="500">
+                 <div class="col-md-6 onStep" data-animation="fadeIn" data-time="500">
                           <div class="sp-padding">
                             <h2 class="full">
                                 Nós somos um time <strong>criativo</strong> para construir seu sonho ou sua estrutura. 
                                 <span class="devider-cont"></span>
                             </h2>          
-          
-                            <p>               
-                              
-                            A Villaggio é uma das <strong>mais tradicionais marcas de vidro e alumínio para o setor moveleiro do país</strong>. Inspirados no design europeu, somos uma empresa brasileira com raízes italianas que atua no mercado há mais de 22 anos. 
-                            Possuímos um dos mais modernos parques tecnológicos do setor, com máquinas e equipamentos de última geração para oferecer soluções inteligentes e acabamentos impecáveis, tudo isso alinhados a processos produtivos ecologicamente corretos.
-                            </p>
-          
-                           
+                       
                           </div>   
                         </div>
 
-                        <div class="col-md-offset-1 col-md-5 onStep" data-animation="fadeIn" data-time="500">
+                        <div class="col-md-6 onStep" data-animation="fadeIn" data-time="500">
                             <div class="sp-padding-no-hide">
-                              <div class="full-dots"></div>
-                              <div class="features">
-                                  <div class="bg-img-3-img">
-                                    <img class="features" alt="img" src="img/bg-serv-4.jpeg">
-                                  </div>
-                              </div>
+                                <p>               
+                                    A Villaggio é uma das <strong>mais tradicionais marcas de vidro e alumínio para o setor moveleiro do país</strong>. Inspirados no design europeu, somos uma empresa brasileira com raízes italianas que atua no mercado há mais de 22 anos. 
+                                    Possuímos um dos mais modernos parques tecnológicos do setor, com máquinas e equipamentos de última geração para oferecer soluções inteligentes e acabamentos impecáveis, tudo isso alinhados a processos produtivos ecologicamente corretos.
+                                    </p>
                             </div>
                           </div>
-                       
-                     
-                                  
              </div>
             </div>
            </section>

@@ -881,3 +881,39 @@ footer .logo-container {
   right: 0;
   bottom: 0;
 }
+
+.bg-dots {
+  width: 400px;
+}
+
+.white-bg {
+  background-color: white !important;
+}
+
+.imagem-produtos-container {
+  width: 100%;
+}
+.imagem-produtos-container .img-item {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 650px;
+}
+.imagem-produtos-container .owl-controls {
+  margin-top: -30px;
+}
+.imagem-produtos-container .owl-controls .active span {
+  opacity: 0.9 !important;
+  border: thin solid black;
+  background-color: transparent;
+}
+.imagem-produtos-container .owl-controls .owl-page span {
+  width: 8px;
+  height: 8px;
+}
+.imagem-produtos-container .owl-controls .owl-page:hover span {
+  opacity: 0.9 !important;
+  border: thin solid black;
+  background-color: transparent;
+}
