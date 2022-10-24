@@ -8,23 +8,15 @@
 @endsection
 
 @section('content')
-<section id="call-action" class="col-content stripe-bg page-internal sobre-empresa">
+<section id="call-action" class="col-content stripe-bg page-internal sobre-empresa pb-40">
     <div class="container-fluid m-5-hor">
-     <div class="row p-200">
+     <div class="row">
   
                
   
-                <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
-                  <div class="sp-padding">
-
-                    <h2>Conheça os nossos <em>produtos</em></h2>
-                
-                    <p>               
-                      
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, pariatur ullam aut architecto perspiciatis maiores in accusamus veniam distinctio totam, consequuntur laboriosam hic dicta sequi laudantium quibusdam, facere voluptatem cumque.
-                    </p>
-
-
+                <div class="col-md-12 onStep text-center" data-animation="fadeIn" data-time="500">
+                  <div class="sp-padding prod-title">
+                    <h2>Produtos</h2>
                   </div>   
                 </div>
              

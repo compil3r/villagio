@@ -3,7 +3,6 @@
     <div class="image-header">
         <div id="overlay" class="bottom"></div>
         <img src="{{asset('img/empresa.jpg')}}" alt="">
-        <h3>Empresa</h3>
     </div>
 @endsection
 
@@ -15,9 +14,9 @@
                
   
                 <div class="col-md-12 onStep" data-animation="fadeIn" data-time="500">
-                  <div class="sp-padding">
+                  <div class="sp-padding prod-title">
 
-                    <h2>Saiba mais sobre <em>quem somos</em></h2>
+                    <h2>Quem somos</h2>
                 
                     <p>               
                       
@@ -28,7 +27,7 @@
                     <p>
                         Dominamos todos os processos industriais e contamos com infinitas possibilidades de cores e acabamentos para que possamos oferecer o que há de melhor e mais inovador no mundo do alumínio, vidro e estrutura metálica para o setor moveleiro.
                     </p>
-                       <hr>
+        
                     <h4>Tradição</h4>
                     <p>
                         Há mais de 22 anos atuando no mercado, a Villaggio foi construída sob uma base familiar sólida, com valores baseados no respeito e no desenvolvimento humano e industrial. Prezamos nossas raízes e acreditamos que o crescimento acontece a partir de uma união perfeita entre tradição e inovação.
@@ -56,9 +55,9 @@
     </div>
    </section>
 
-   <section class="no-top no-bottom">
+   <section class="no-top no-bottom p-relative">
     <div class="container-fluid">
-        <div class="grid">
+        <div class="grid grid-empresa">
             <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="modalImagem(1)">
                 <img src="{{asset('img/colaboradores/1.jpg')}}" alt="">
             </div>
@@ -88,7 +87,7 @@
 </section>
 
 
-<section class="timeline">
+<section class="timeline p-relative">
     <div class="container-fluid">
         <ul class="years">
             <li class="active" data-year="2000">2000</li>

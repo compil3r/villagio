@@ -26,7 +26,7 @@
     <link href="/css/owl.transitions.css" rel="stylesheet">
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/css/app.css?v=12" rel="stylesheet">
+    <link href="/css/app.css?v=13" rel="stylesheet">
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 
@@ -82,7 +82,7 @@
                                     <a href="#"><span>ES</span></a>
                                     <a href="#"><span>ENG</span></a>
             
-                                    <a href="#"><span class="ti-user"></span></a>
+                                    
                                 </div>
                                
                             </div>
@@ -166,7 +166,7 @@
                                     <li>
                                         <a href="#" >
                                             <div class="box">
-                                                <div data-hover="Acesso do Cliente"> Acesso do Cliente</div>
+                                                <div data-hover="Portal <span class='ti-user'></span>"> Portal <span class="ml-3 ti-user"></span></div>
                                             </div>
                                         </a>
                                     </li>
@@ -214,7 +214,7 @@
         @yield('content')
 
         <!-- footer -->
-        <footer class="choc">
+        <footer class="choc p-relative">
             <div class="container-fluid m-5-hor">
                 <!-- animate row -->
                 <div class="row position-relative">
