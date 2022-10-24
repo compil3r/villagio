@@ -128,7 +128,7 @@
             </div>
            </section>
 
-        <section class="no-top no-bottom">
+        <section class="no-top no-bottom p-relative" >
             <div class="container-fluid">
                 <div class="row goldpage-choc">
 
@@ -153,7 +153,7 @@
 
 
         <!-- gallery -->
-        <section>
+        <section class="p-relative">
             <div class="container-fluid m-5-hor">
                 <div class="row">
 

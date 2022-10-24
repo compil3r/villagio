@@ -94,6 +94,14 @@ body {
   bottom: 10%;
 }
 
+img.white {
+  display: none;
+}
+
+img.black {
+  display: block !important;
+}
+
 .no-section-image .white li a, .no-section-image .white li a:hover, .no-section-image .white li a.actived {
   color: black;
 }
@@ -108,10 +116,10 @@ body {
   background: white;
   border-bottom: thin solid white !important;
 }
-.no-section-image .sticky .white img.white {
+.no-section-image .sticky img.white {
   display: none;
 }
-.no-section-image .sticky .white img.black {
+.no-section-image .sticky img.black {
   display: block;
 }
 
@@ -134,6 +142,12 @@ body {
 
 .sticky .navbar-brand.white img {
   max-height: 25px !important;
+}
+.sticky img.white {
+  display: block;
+}
+.sticky img.black {
+  display: none !important;
 }
 
 #about-us {
@@ -522,7 +536,11 @@ footer img {
 
 header.choc.show {
   height: 50px;
-  background: rgb(20, 20, 20) !important;
+  background: rgb(255, 255, 255) !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+header.choc.show #menu-center a {
+  color: rgb(0, 0, 0);
 }
 
 footer.choc {

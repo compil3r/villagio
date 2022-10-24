@@ -26,7 +26,7 @@
     <link href="/css/owl.transitions.css" rel="stylesheet">
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/css/app.css?v=13" rel="stylesheet">
+    <link href="/css/app.css?v=14" rel="stylesheet">
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 
@@ -46,7 +46,8 @@
     <div id="portfolioDiv">
 
         <div class="logo">
-                <img src="img/logo.png" alt="">
+                <img src="img/logo.png" class="branco" alt="">
+                
         </div>
 
         <div class="portfolioMenu">

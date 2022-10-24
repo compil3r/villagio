@@ -107,6 +107,12 @@ body {
  bottom: 10%;
 }
 
+img.white {
+    display: none;
+}
+img.black {
+    display: block !important;
+}
 .no-section-image  {
     .white li a, .white li a:hover, .white li a.actived {
         color: black;
@@ -127,14 +133,14 @@ body {
             border-bottom: thin solid white !important;
         }
 
-        .white {
+        
             img.white {
                 display: none;
             }
             img.black {
                 display: block;
             }
-        }
+        
     }
 }
 
@@ -158,6 +164,13 @@ body {
 .sticky {
     .navbar-brand.white img {
         max-height: 25px !important;
+    }
+
+    img.white {
+        display: block;
+    }
+    img.black {
+        display: none !important;
     }
 }
 
@@ -647,7 +660,15 @@ footer {
 
 header.choc.show {
     height: 50px;
-    background: rgb(20, 20, 20) !important;
+    background: rgb(255, 255, 255) !important;
+
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    
+    #menu-center {
+        a {
+            color: rgb(0, 0, 0);
+        }
+    }
 }
 
 footer.choc {

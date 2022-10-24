@@ -26,7 +26,7 @@
     <link href="/css/owl.transitions.css" rel="stylesheet">
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/css/app.css?v=13" rel="stylesheet">
+    <link href="/css/app.css?v=14" rel="stylesheet">
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 
@@ -106,7 +106,7 @@
 
                         <!-- logo -->
                         <a class="navbar-brand white" href="/">
-                            <img class="white" alt="logo" src="/img/logo.png">
+                            <img class="white" alt="logo" src="/img/logo-preto.png">
                             <img class="black" alt="logo" src="/img/logo.png">
                         </a>
                         <!-- logo end -->
