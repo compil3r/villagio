@@ -40,37 +40,37 @@
                     <p>Perfis para Portas</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('puxadores')">
                 <img src="{{asset('img/produtos/destaque/puxadores.png')}}" alt="">
                 <div class="legenda">
                     <p>Puxadores</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('divisorias-de-ambientes')">
                 <img src="{{asset('img/produtos/destaque/divisorias.png')}}" alt="">
                 <div class="legenda">
                     <p>Divisórias de Ambientes</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('acessorios')">
                 <img src="{{asset('img/produtos/destaque/acessorios.png')}}" alt="">
                 <div class="legenda">
                     <p>Acessórios</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('acabamentos')">
                 <img src="{{asset('img/produtos/destaque/acabamentos.png')}}" alt="">
                 <div class="legenda">
                     <p>Acabamentos</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('sistemas')">
                 <img src="{{asset('img/produtos/destaque/sistemas.png')}}" alt="">
                 <div class="legenda">
                     <p>Sistemas</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto()">
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('esquadrias')">
                 <img src="{{asset('img/produtos/destaque/esquadrias.png')}}" alt="">
                 <div class="legenda">
                     <p>Esquadrias</p>

@@ -104,16 +104,14 @@
 
         <div class="year">
             <div class="content">
-                <div class="title">2000</div>
+                {{-- <div class="title">2000</div> --}}
                 <div class="text">
                     <p>
                         Em janeiro nasce a Villaggio, uma empresa de representação comercial de acessórios para móveis.
                     </p>
                 </div>
             </div>
-            <div class="image">
-                <img src="{{asset('img/bg-serv-1.jpeg')}}" alt="">
-            </div>
+            
         </div>
     </div>
 </section>
