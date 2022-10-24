@@ -116,7 +116,16 @@
     </div>
 </section>
 
-
+<section class="p-relative">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <video src="{{asset('video/institucional.mp4')}}" controls style="padding: 0 25%; width: 100%">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
 
 @section('modal')
