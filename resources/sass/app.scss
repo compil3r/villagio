@@ -893,8 +893,7 @@ footer.choc {
             margin-top: 55px;
             right: calc(50% - 68px);
             background: #fff;
-            box-shadow: 0 0 20px 12px rgb(0 0 0 / 4%);
-            -webkit-box-shadow: 0 0 20px 12px rgb(0 0 0 / 4%);
+            box-shadow: none;
             padding: 20px;
 
             .title {
@@ -925,7 +924,7 @@ footer.choc {
             .text {
                 
 
-            font-size: 2rem;
+            font-size: 1.9rem;
             text-align: center;
             display: block;
       

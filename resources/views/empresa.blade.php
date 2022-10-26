@@ -120,7 +120,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <video src="{{asset('video/institucional.mp4')}}" controls style="padding: 0 25%; width: 100%">
+                <video src="{{asset('video/institucional2.mp4')}}" controls style="padding: 0 25%; width: 100%">
                 </video>
             </div>
         </div>

@@ -733,8 +733,7 @@ footer.choc {
   margin-top: 55px;
   right: calc(50% - 68px);
   background: #fff;
-  box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.04);
-  -webkit-box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: none;
   padding: 20px;
 }
 .timeline .year .content .title {
@@ -761,7 +760,7 @@ footer.choc {
   margin-left: 20px;
 }
 .timeline .year .content .text {
-  font-size: 2rem;
+  font-size: 1.9rem;
   text-align: center;
   display: block;
   margin-top: 31px;
