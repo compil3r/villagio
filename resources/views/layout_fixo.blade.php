@@ -27,6 +27,7 @@
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
     <link href="/css/app.css?v=14" rel="stylesheet">
+    @yield('styles')
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 
@@ -133,7 +134,7 @@
                                     </li>
                                     
                                     <li>
-                                        <a href="#"  id="portfolioButton" >
+                                        <a href="/projetos"  id="portfolioButton" >
                                             <div class="box">
                                                 <div data-hover="Projetos">Projetos</div>
                                             </div>
@@ -142,20 +143,15 @@
 
 
                                     <li>
-                                        <a href="#" >
+                                        <a href="/contato" >
                                             <div id="contato" class="box">
                                                 <div data-hover="Contato">Contato</div>
                                             </div>
                                         </a>
-
-                                        <ul>
-                                            <li><a href="#">Trabalhe Conosco</a></li>
-                                            
-                                        </ul>
                                     </li>
 
                                     <li>
-                                        <a href="#" >
+                                        <a href="/franquias" >
                                             <div class="box">
                                                 <div data-hover="Franquias">Franquias</div>
                                             </div>

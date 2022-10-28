@@ -20,6 +20,15 @@ Route::get('/empresa', function() {
     return view('empresa');
 });
 
+Route::get('/contato', function() {
+    return view('contato');
+});
+
+
+Route::get('/franquias', function() {
+    return view('franquias');
+});
+
 
 Route::get('/produtos', function() {
     return view('produtos');

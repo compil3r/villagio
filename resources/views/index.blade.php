@@ -128,28 +128,60 @@
             </div>
            </section>
 
-        <section class="no-top no-bottom p-relative" >
-            <div class="container-fluid">
-                <div class="row goldpage-choc">
-
-                    <div class="col-lg-7 col-lg-offset-1 col-md-12 text-center">
-                        <h3>Procurando por qualidade no seu próximo projeto?</h3>
+             <!-- section about -->
+  <section id="about-us-1" class="h-bg no-padding col-content color-page">
+    <div class="container-fluid">
+     <div class="row">
+     
+      <div class="image-container col-lg-6 hidden-md hidden-sm hidden-xs pull-left onStep" data-animation="fadeInLeft" data-time="0"></div>
+  
+                 <div class="col-lg-6 p-90">
+                  <div class="sp-padding">
+                    <h3 class="bg-dots">
+                      Perfection concept
+                      <span class="devider-cont"></span>
+                    </h3>          
+  
+                    <p>               
+  et lobortis Nulla in odio quis augue ultrices blandit. Phasellus ipsum nibh, 
+  porta non sapien non efficitur pulvinar neque. Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium natus error sit.Mauris interdum libero vitae tellus vestibulum, nec sollicitudin dui mollis.</p>
+                     
+                </div>   
+                <div class="clearfix"></div>
+               </div>
+                          
+     </div>
+    </div>
+   </section>
+   <!-- section about end -->
+              
+              <!-- section about -->
+              <section id="about-us-2" class="h-bg no-padding col-content color-page">
+              <div class="container-fluid">
+                 <div class="row">
+                 
+                  <div class="image-container col-lg-6 hidden-md hidden-sm hidden-xs pull-right onStep" data-animation="fadeInRight" data-time="0"></div>
+  
+                  <div class="col-lg-6 p-60">
+                   <div class="sp-padding">
+                    <h3 class="bg-dots">
+                      Powerful Interior Design
+                      <span class="devider-cont"></span>
+                    </h3>
+                    
+                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem 
+  accusantium natus error sit.Mauris interdum libero vitae 
+  tellus vestibulum, nec sollicitudin dui mollis. Praesent semper 
+  massa nec pellentesque </p>
+                    
                     </div>
-
-                    <div class="col-lg-3  col-md-12">
-                        <div class="btn-content">
-                            <span class="shine"></span>
-                            <a href="#">Fale Conosco</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        
-      
-
+                  <div class="clearfix"></div>
+                 </div>
+                 
+               </div>
+              </div>
+              </section>
+              <!-- section about end -->
 
 
         <!-- gallery -->

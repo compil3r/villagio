@@ -133,7 +133,7 @@
                                     </li>
                                     
                                     <li>
-                                        <a href="#"  id="portfolioButton" >
+                                        <a href="/projetos"  id="portfolioButton" >
                                             <div class="box">
                                                 <div data-hover="Projetos">Projetos</div>
                                             </div>
@@ -142,20 +142,17 @@
 
 
                                     <li>
-                                        <a href="#" >
+                                        <a href="/contato" >
                                             <div id="contato" class="box">
                                                 <div data-hover="Contato">Contato</div>
                                             </div>
                                         </a>
 
-                                        <ul>
-                                            <li><a href="#">Trabalhe Conosco</a></li>
-                                            
-                                        </ul>
+                                    
                                     </li>
 
                                     <li>
-                                        <a href="#" >
+                                        <a href="/franquias" >
                                             <div class="box">
                                                 <div data-hover="Franquias">Franquias</div>
                                             </div>

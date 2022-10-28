@@ -142,6 +142,15 @@ img.black {
             }
         
     }
+
+    .navbar-brand.white {
+        img.white {
+            display: block !important;
+        }
+        img.black {
+            display: none;
+        }
+    }
 }
 
 #overlay {
@@ -1210,4 +1219,39 @@ footer.choc {
 
 .p-relative {
     position: relative;
+}
+
+#name-contact-1, .form-control {
+    border: thin solid #888888;
+    &:focus {
+        border: thin solid #888888;
+    }
+}
+
+.btn-contact {
+    background-color: #131212;
+    color: white;
+    border: thin solid #131212;
+    &:hover {
+        background-color: white;
+        border-color: #131212;
+        color: #131212;;
+    }
+}
+
+.color-page {
+    background-color:  rgba(20, 20, 20, 1);
+}
+
+#about-us-1 .image-container {
+    background: url('../img/acabamentos.png') no-repeat center center;
+}
+
+#about-us-2 .image-container {
+    background: url('../img/perfis.png') no-repeat center center;
+}
+
+
+#map {
+    height: 560px;
 }

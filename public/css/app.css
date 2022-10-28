@@ -122,6 +122,12 @@ img.black {
 .no-section-image .sticky img.black {
   display: block;
 }
+.no-section-image .navbar-brand.white img.white {
+  display: block !important;
+}
+.no-section-image .navbar-brand.white img.black {
+  display: none;
+}
 
 #overlay {
   width: 100%;
@@ -975,4 +981,38 @@ footer .logo-container {
 
 .p-relative {
   position: relative;
+}
+
+#name-contact-1, .form-control {
+  border: thin solid #888888;
+}
+#name-contact-1:focus, .form-control:focus {
+  border: thin solid #888888;
+}
+
+.btn-contact {
+  background-color: #131212;
+  color: white;
+  border: thin solid #131212;
+}
+.btn-contact:hover {
+  background-color: white;
+  border-color: #131212;
+  color: #131212;
+}
+
+.color-page {
+  background-color: rgb(20, 20, 20);
+}
+
+#about-us-1 .image-container {
+  background: url(/images/acabamentos.png?c9901305ad0520e688da284bd72e420b) no-repeat center center;
+}
+
+#about-us-2 .image-container {
+  background: url(/images/perfis.png?d15a4f17e44205e4c70bac5fe712ea19) no-repeat center center;
+}
+
+#map {
+  height: 560px;
 }
