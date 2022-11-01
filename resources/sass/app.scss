@@ -1245,7 +1245,34 @@ footer.choc {
 
 #about-us-1 .image-container {
     background: url('../img/acabamentos.png') no-repeat center center;
+    height: 500px !important;
 }
+
+#about-us-1 .image-container-sm {
+    height: 250px !important;
+
+    // primeiro
+    &:nth-child(3) {
+        background: url('../img/perfis.png') no-repeat center center;
+    }
+
+    // segundo
+    &:nth-child(2) {
+        background: url('../img/esquadrias.png') no-repeat center center;
+    }
+}
+
+#about-us-1 {
+    background-color: white;
+    color: rgb(20, 20, 20);
+    text-align: center;
+
+    .sp-padding {
+        padding: 80px 0;
+    }
+}
+
+
 
 #about-us-2 .image-container {
     background: url('../img/perfis.png') no-repeat center center;

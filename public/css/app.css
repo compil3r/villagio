@@ -1007,6 +1007,26 @@ footer .logo-container {
 
 #about-us-1 .image-container {
   background: url(/images/acabamentos.png?c9901305ad0520e688da284bd72e420b) no-repeat center center;
+  height: 500px !important;
+}
+
+#about-us-1 .image-container-sm {
+  height: 250px !important;
+}
+#about-us-1 .image-container-sm:nth-child(3) {
+  background: url(/images/perfis.png?d15a4f17e44205e4c70bac5fe712ea19) no-repeat center center;
+}
+#about-us-1 .image-container-sm:nth-child(2) {
+  background: url(/images/esquadrias.png?6c86bc38eccf88cca626dbc369f07ca4) no-repeat center center;
+}
+
+#about-us-1 {
+  background-color: white;
+  color: rgb(20, 20, 20);
+  text-align: center;
+}
+#about-us-1 .sp-padding {
+  padding: 80px 0;
 }
 
 #about-us-2 .image-container {
