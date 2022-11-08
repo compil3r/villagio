@@ -55,7 +55,8 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+       
+        // dd($request->all());
         $request->validate([
             'titulo' => 'required',
             'descricao' => 'required',
@@ -66,6 +67,7 @@ class ProdutosController extends Controller
         $produto->titulo = $request->titulo;
         $produto->subtitulo = $request->subtitulo;
         $produto->descricao = $request->descricao;
+        $produto->utilizacao = $request->utilizacao;
  
         $produto->categoria = $request->categoria;
         //imagem upload
@@ -92,6 +94,26 @@ class ProdutosController extends Controller
                 $imagesArray[] = ['imagem' => $imageName];
             }
             $produto->imagens()->createMany($imagesArray);
+        }
+
+        // foreach in nameCompativeis with index 
+        if ($request->has('nameCompativel')) {
+            $compativeisArray = [];
+
+            foreach ($request->nameCompativel as $index => $compativeis) {
+                if($request->tipoCompativel[$index] == 'link') {
+                    $compativeisArray[] = ['compativel_id' => $request->linkCompativel[$index], 'tipo' => 'produto', 'nome' => $request->nameCompativel[$index]];
+                } else {
+                    // upload image inside $request->imagemCompativel[$index]
+                    $requestImage = $request->ImagemCompativel[$index];
+                    $extension = $requestImage->extension();
+                    $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+                    $requestImage->move(public_path('img/uploads'), $imageName);
+                    $compativeisArray[] = ['imagem' => $imageName, 'tipo' => 'imagem', 'nome' => $request->nameCompativel[$index]];
+                }
+            }
+            $produto->compativeis()->createMany($compativeisArray);
+
         }
         
         
@@ -183,5 +205,11 @@ class ProdutosController extends Controller
         $produto->delete();
 
         return redirect()->route('dashboard.produtos.index');
+    }
+
+    function apiProdutos()
+    {
+        $produtos = \App\Models\Produto::all();
+        return response()->json($produtos);
     }
 }

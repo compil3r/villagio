@@ -34,6 +34,8 @@ Route::get('/produtos', function() {
     return view('produtos');
 });
 
+Route::get('/projetos', [\App\Http\Controllers\ProjetosController::class, 'index'])->name('projetos.index');
+
 Route::get('/grupo-de-produtos/{categoria}', [App\Http\Controllers\CategoriaController::class, 'index'])->name('grupo-de-produtos');
 
 Route::get('/produto/{slug}', [App\Http\Controllers\ProdutosController::class, 'index'])->name('produto');
@@ -42,6 +44,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+Route::get('/api/produtos', [App\Http\Controllers\Dashboard\ProdutosController::class, 'apiProdutos'])->name('api-produtos');
 
 //route to dashboard/produtos
 

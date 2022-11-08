@@ -30,7 +30,7 @@
                         {{--token--}}
                         @csrf
                         {{--titulo--}}
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 gap-4">
                             <div>
                                 <x-label for="nome" :value="__('Titulo')" />
                                 <x-input id="nome" class="block mt-1 w-full" type="text" name="titulo" wire:model="titulo" required autofocus value="{{$produto->titulo}}" />
@@ -41,7 +41,8 @@
                             </div>
                             <div>
                                 <x-label for="descricao" :value="__('Descrição')" />
-                                <x-input id="descricao"  value="{{$produto->descricao}}"  class="block mt-1 w-full" type="text" name="descricao" wire:model="descricao" required autofocus />
+                                <textarea class="description w-full block mt-1 " name="descricao">{{$produto->descricao}}</textarea>
+
                             </div>
                             <div>
                                 <x-label for="categoria" :value="__('Categoria')" />

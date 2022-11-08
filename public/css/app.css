@@ -618,6 +618,7 @@ footer.choc {
 
 #call-action.page-internal {
   text-align: justify;
+  background-color: white;
 }
 
 .p-200 {
@@ -1035,4 +1036,156 @@ footer .logo-container {
 
 #map {
   height: 560px;
+}
+
+.contato select, .contato input.form-control, .contato textarea {
+  border: thin solid #888888;
+}
+.contato select:focus, .contato input.form-control:focus, .contato textarea:focus {
+  border: thin solid #888888;
+}
+.contato select:hover, .contato input.form-control:hover, .contato textarea:hover {
+  border: thin solid #888888;
+}
+
+address.cont-1 span {
+  border-bottom: none;
+  line-height: 20pt;
+}
+
+.pt-0 {
+  padding-top: 0px !important;
+}
+
+.icon-localizacao i {
+  border: thin solid;
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.icon-localizacao i:hover {
+  background-color: #131212;
+  color: white;
+}
+
+/* Icon Animation */
+.eut-hover-effect i {
+  position: relative;
+}
+
+.eut-hover-effect i:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: icon_box_animation;
+  animation-name: icon_box_animation;
+  display: none;
+}
+
+i:after {
+  border-radius: 50%;
+}
+
+.eut-hover-effect i:after {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #424141;
+  top: -1px;
+  left: -1px;
+}
+
+@-webkit-keyframes icon_box_animation {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.8);
+  }
+}
+@keyframes icon_box_animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}
+.eut-hover-effect:hover i:after {
+  display: block;
+}
+
+.trabalheConosco h2 {
+  padding-top: 28px;
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-size: 13pt;
+  margin-bottom: 0px;
+}
+.trabalheConosco a:hover {
+  color: #131212;
+  text-decoration: none;
+}
+
+.grid-4 {
+  padding-right: 0;
+}
+.grid-4 .container-fluid {
+  padding-right: 0;
+}
+.grid-4 .grid.produtos {
+  padding-right: 0;
+}
+.grid-4 .grid.produtos .grid-item {
+  flex: 1 0 50%;
+  border: none;
+  margin-bottom: 0px;
+}
+.grid-4 .grid.produtos .grid-item .grid-text {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 68px;
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  border: 22px solid white;
+}
+.grid-4 .grid.produtos .grid-item .grid-text:hover {
+  /* -webkit-box-shadow: inset 0px 0px 0px 10px #f00; */
+  box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
+}
+
+.grid-1 {
+  padding-left: 0;
+}
+.grid-1 .container-fluid {
+  padding-left: 0;
+}
+.grid-1 .grid.produtos .grid-item {
+  flex: 1 0 100%;
+  height: 600px;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.content-wrapper {
+  overflow-x: visible;
 }

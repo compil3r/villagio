@@ -133,7 +133,8 @@
                                     </li>
                                     
                                     <li>
-                                        <a href="/projetos"  id="portfolioButton" >
+                                        {{-- <a href="/projetos"  id="portfolioButton" > --}}
+                                        <a href="/projetos">
                                             <div class="box">
                                                 <div data-hover="Projetos">Projetos</div>
                                             </div>
@@ -161,7 +162,7 @@
 
 
                                     <li>
-                                        <a href="#" >
+                                        <a href="https://configurador.villaggioaluminios.com.br/Login.aspx?ReturnUrl=%2fDefault.aspx&ReturnUrl=%2fDefault.aspx" >
                                             <div class="box">
                                                 <div data-hover="Portal <span class='ti-user'></span>"> Portal <span class="ml-3 ti-user"></span></div>
                                             </div>

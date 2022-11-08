@@ -58,4 +58,10 @@ class Produto extends Model
         }
         
     }
+
+    // compativeis
+    public function compativeis()
+    {
+        return $this->hasMany(Compativel::class, 'produto_id');
+    }
 }
