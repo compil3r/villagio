@@ -285,6 +285,11 @@
 </div>
 @endsection
 
+    <script>
+        function irParaProduto(produto) {
+            window.location.href = '/grupo-de-produtos/' + produto;
+        }
+    </script>
 @section('scripts')
 
 @endsection

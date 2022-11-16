@@ -35,10 +35,10 @@
                                 <x-label for="nome" :value="__('Titulo')" />
                                 <x-input id="nome" class="block mt-1 w-full" type="text" name="titulo" wire:model="titulo" required autofocus value="{{$produto->titulo}}" />
                             </div>
-                            <div>
+                            {{-- <div>
                                 <x-label for="subtitulo" :value="__('Subtitulo')" />
                                 <x-input  value="{{$produto->subtitulo}}"  id="subtitulo" class="block mt-1 w-full" type="text" name="subtitulo" wire:model="subtitulo" required autofocus />
-                            </div>
+                            </div> --}}
                             <div>
                                 <x-label for="descricao" :value="__('Descrição')" />
                                 <textarea class="description w-full block mt-1 " name="descricao">{{$produto->descricao}}</textarea>
@@ -69,6 +69,50 @@
                                     <a href="{{asset('img/uploads/'.$imagem->imagem)}}" target="_blank">Ver imagem atual</a> <br>
                                 @endforeach
 
+                            </div>
+
+                            <div>
+                                <x-label for="utilizacao" :value="__('Utilização')" />
+                                <x-input id="utilizacao" class="block mt-1 w-full" type="text" name="utilizacao" wire:model="utilizacao"  autofocus value="{{$produto->utilizacao}}" />
+                            </div>
+
+                            <div id="compativel">
+                                @foreach($produto->compativeis as $compativel)
+                                <div>
+                                    <div class="col-md-2">
+                                        Compativel com
+                                    </div>
+                                </div>
+                                <div class="flex flex-row mt-2">
+                                    <input type="text" class="form-control w-1/4 mr-2" name="nameCompativel[]" placeholder="Nome do Compativel" style="margin-botom: 10px" value="{{$compativel->nome}}">
+                                    <select name="tipoCompativel[]" onChange="showCompativel(this)" id="" class="form-control w-1/4 mr-2">
+                                        <option value="link" {{$compativel->tipo == 'produto' ? 'selected' : "" }}>Link</option>
+                                        <option value="imagem" {{$compativel->tipo == 'imagem' ? 'selected' : "" }}>Imagem</option>
+                                    </select>
+                                    <select name="linkCompativel[]" class="form-control w-1/4 mr-2" style="display: {{$compativel->tipo != "imagem" ? "block" : "none" }}">
+                                        <option value="0">Selecione um produto</option>
+                                        @foreach ($produtos as $produto) 
+                                            <option value="{{$produto->id}}" {{$compativel->compativel_id == $produto->id ? 'selected' : "" }}>{{$produto->titulo}}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="file" class="form-control w-1/4 mr-2" name="ImagemCompativel[]" placeholder="Imagem do Compativel" value="{{$compativel->imagem}}" style="display: {{$compativel->tipo == "imagem" ? "block" : "none" }}">
+
+                                    <select name="grupos[]"  class="form-control w-1/4 mr-2">
+                                        <option value="perfil" {{$compativel->grupo == "perfil" ? 'selected' : '' }}>Perfil</option>
+                                        <option value="puxador" {{$compativel->grupo == "puxador" ? 'selected' : '' }}>Puxador</option>
+                                        <option value="divisor" {{$compativel->grupo == "divisor" ? 'selected' : '' }}>Puxador</option>
+
+                                    </select>
+
+                                    
+                                    <button type="button" class="btn btn-danger" onclick="removeCompativel(this)">Remover</button>
+                                </div>
+                                @endforeach
+                            </div>
+                            <div class="flex">
+                                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="addCompativel()">
+                                    Adicionar Compatível
+                                </button>
                             </div>
                             
                         </div>

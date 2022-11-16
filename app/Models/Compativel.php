@@ -14,7 +14,20 @@ class Compativel extends Model
         'produto_id',
         'compativel_id',
         'imagem',
+        'grupo',
         'tipo'
     ];
+
+    public function produto()
+    {
+        return $this->belongsTo(Produto::class);
+    }
+
+    public function compativel()
+    {
+        return $this->belongsTo(Produto::class, 'compativel_id');
+    }
+
+  
 
 }

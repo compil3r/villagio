@@ -130,6 +130,41 @@
         // default not display
         ImagemCompativel.setAttribute('style', 'display: none; margin-bottom: 10px;');
         row.appendChild(ImagemCompativel);
+        
+        // select para grupo com opcoes (Perfil, Acabamento, Puxador, Sistema, Divisor)
+        var grupo = document.createElement('select');
+        grupo.setAttribute('name', 'grupo[]');
+        grupo.setAttribute('class', 'form-control');
+        grupo.classList.add('w-1/4', 'mr-2');
+        grupo.setAttribute('style', 'margin-bottom: 10px;');
+        row.appendChild(grupo);
+        
+        var optionPerfil = document.createElement('option');
+        optionPerfil.setAttribute('value', 'perfil');
+        optionPerfil.innerHTML = 'Perfil';
+        grupo.appendChild(optionPerfil);
+
+        var optionAcabamento = document.createElement('option');
+        optionAcabamento.setAttribute('value', 'acabamento');
+        optionAcabamento.innerHTML = 'Acabamento';
+        grupo.appendChild(optionAcabamento);
+
+        var optionPuxador = document.createElement('option');
+        optionPuxador.setAttribute('value', 'puxador');
+        optionPuxador.innerHTML = 'Puxador';
+        grupo.appendChild(optionPuxador);
+
+        var optionSistema = document.createElement('option');
+        optionSistema.setAttribute('value', 'sistema');
+        optionSistema.innerHTML = 'Sistema';
+        grupo.appendChild(optionSistema);
+
+        var optionDivisor = document.createElement('option');
+        optionDivisor.setAttribute('value', 'divisor');
+        optionDivisor.innerHTML = 'Divisor';
+        grupo.appendChild(optionDivisor);
+
+
 
         // REMOVE
         var remove = document.createElement('button');

@@ -139,11 +139,46 @@
                     <div class="ProductDetails_productDetailsInfo__rPvyX">
                         <div class="ProductDetails_productDetailsInfoRow__sLjMj"><h1 class="ProductDetails_productDetailsInfoLabel__Kb7qU">{{$produto->titulo}}</h1></div>
                         <br>
-                        @if($produto->subtitulo)
-                        <strong>{{$produto->subtitulo}}</strong>
-                        <br><br>
-                        @endif
                         <p>{!!$produto->descricao!!}</p>
+
+                        @if($produto->utilizacao)
+                        <span class="utilizacao"><strong>Utilização:</strong> {{$produto->utilizacao}} </span>
+                        @endif
+
+                        @if($produto->compativeis)
+                       
+                            @if($produto->puxadores) 
+                            <span class="compativel">
+                            <strong>Puxadores Compatíveis:</strong>
+                            @foreach($produto->puxadores as $compativeis)
+                            @if($compativeis->tipo == 'produto')
+                            <a href="{{route('produto', $compativeis->compativel->slug)}}" target="_blank">{{$compativeis->nome}}</a>@if(!$loop->last),@endif
+
+                            @else
+                            {{$compativeis->nome}}@if(!$loop->last),@endif
+                            @endif
+                            {{-- separar com virgula se nao for o ultimo --}}
+                            @endforeach 
+                            </span>
+                            @endif
+
+                            @if($produto->divisores->count() > 0)
+                            <span class="compativel">
+                            <strong>Divisores Compatíveis:</strong>
+                            @foreach($produto->divisores as $compativeis)
+                            @if($compativeis->tipo == 'produto')
+                            <a href="{{route('produto', $compativeis->compativel->slug)}}" target="_blank">{{$compativeis->nome}}</a>@if(!$loop->last),@endif
+
+                            @else
+                            {{$compativeis->nome}}@if(!$loop->last),@endif
+                            @endif
+                            {{-- separar com virgula se nao for o ultimo --}}
+                            @endforeach
+                            </span>
+                            @endif
+                   
+                        @endif
+
 
                     </div>
                     @foreach($produto->imagens as $imagem)

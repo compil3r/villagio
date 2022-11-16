@@ -727,17 +727,17 @@ footer.choc {
   color: #888888;
   text-align: right;
   padding: 0 25%;
-  margin-top: 61px;
+  display: flex;
+  justify-content: center;
 }
 .timeline .year .content {
-  width: 100%;
+  width: 50%;
   height: 250px;
   position: static;
   right: transfor;
   /* max-width: 275px; */
   /* min-height: 200px; */
   /* top: 33px; */
-  margin-top: 55px;
   right: calc(50% - 68px);
   background: #fff;
   box-shadow: none;
@@ -767,7 +767,7 @@ footer.choc {
   margin-left: 20px;
 }
 .timeline .year .content .text {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   text-align: center;
   display: block;
   margin-top: 31px;
