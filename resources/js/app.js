@@ -29,7 +29,7 @@ $(".botaoPortifolio").click(() => {
 $('.imagem-produtos-container').owlCarousel({
     items:1,
     margin:10,
-    autoPlay:false,
+    autoPlay:true,
     loop:true,
     autoPlayTimeout: 500,
     autoPlaySpeed: 5000,

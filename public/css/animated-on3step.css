@@ -420,26 +420,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.3);
-    -ms-transform: scale(0.3);
-    transform: scale(0.3);
+    transform: scale3d(.3, .3, .3);
   }
-  50% {
-    opacity: 1;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-  70% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
+  
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+   
   }
 }
 .bounceIn {

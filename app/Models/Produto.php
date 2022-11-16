@@ -58,4 +58,20 @@ class Produto extends Model
         }
         
     }
+
+    // compativeis
+    public function compativeis()
+    {
+        return $this->hasMany(Compativel::class, 'produto_id');
+    }
+
+    public function puxadores()
+    {
+        return $this->hasMany(Compativel::class, 'produto_id')->where('grupo', 'puxador');
+    }
+
+    public function divisores()
+    {
+        return $this->hasMany(Compativel::class, 'produto_id')->where('grupo', 'divisor');
+    }
 }

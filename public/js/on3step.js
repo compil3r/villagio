@@ -68,7 +68,7 @@ jQuery( window ).on( "load", function() {
             // opening slideup
             bgpreloader.fadeOut( 1500 );
             // animated transition & scroll onStep
-            onStep();
+
             // stick navbar
             navdefault.sticky();
 
@@ -154,3 +154,7 @@ jQuery( window ).on( "load", function() {
 
  } );
 // HTML document is loaded end
+
+
+window.addEventListener("scroll", onStep);
+

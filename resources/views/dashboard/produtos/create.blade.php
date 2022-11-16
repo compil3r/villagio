@@ -61,6 +61,14 @@
                                 <x-label for="imagens" :value="__('Fotos Secundárias - 1 ou mais imagens')" />
                                 <x-input id="imagens" class="block mt-1 w-full" type="file" name="imagens[]" wire:model="imagens" multiple autofocus />
                             </div>
+
+                            {{-- button when click add new Compativel --}}
+                            <div id="compativel"></div>
+                            <div class="flex">
+                                <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="addCompativel()">
+                                    Adicionar Compatível
+                                </button>
+                            </div>
                         </div>
                         <div class="flex justify-center mt-4">
                             <x-button class="ml-4">
