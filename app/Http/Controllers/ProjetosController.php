@@ -13,9 +13,8 @@ class ProjetosController extends Controller
      */
     public function index()
     {
-        $produtos = \App\Models\Produto::limit(6)->get();
-        $nome = 'Projetos';
-        return view('grupo-de-produtos', compact('produtos','nome'));
+        
+        return view('grupo-de-projetos');
 
     }
 

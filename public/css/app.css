@@ -1154,10 +1154,15 @@ i:after {
   border: none;
   margin-bottom: 0px;
 }
-.grid-4 .grid.produtos .grid-item .grid-text {
-  font-size: 5rem;
+.grid-4 .grid.produtos .grid-item .legenda p {
+  font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 700;
+}
+.grid-4 .grid.produtos .grid-item .grid-text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
   line-height: 68px;
   /* display: flex; */
   display: flex;
@@ -1185,7 +1190,39 @@ i:after {
   border: none;
   margin-bottom: 0px;
 }
+.grid-1 .grid.produtos .grid-item .legenda {
+  top: 45%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  transform: translate(-50%);
+  padding: 1px 40px;
+  font-weight: 700;
+}
+.grid-1 .grid.produtos .grid-item .legenda p {
+  font-weight: 700;
+}
 
 .content-wrapper {
   overflow-x: visible;
+}
+
+#novidade {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+#novidade h2 {
+  font-size: 7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 1px 2px 10px #000;
+  margin-bottom: 28px;
+}
+#novidade a {
+  background-color: white;
+  color: black;
+  padding: 11px;
+  margin-top: 25px;
+  text-transform: uppercase;
 }
