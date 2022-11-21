@@ -60,4 +60,14 @@ Route::prefix('dashboard/produtos')->middleware(['auth'])->group(function () {
     Route::delete('/destroy/{id}', [App\Http\Controllers\Dashboard\ProdutosController::class, 'destroy'])->name('dashboard.produtos.destroy');
 });
 
+//dashboard produtos all routes with prefix dashboard/produtos
+Route::prefix('dashboard/projetos')->middleware(['auth'])->group(function () {
+    Route::get('/', [App\Http\Controllers\Dashboard\ProjetosController::class, 'index'])->name('dashboard.projetos.index');
+    Route::get('/create', [App\Http\Controllers\Dashboard\ProjetosController::class, 'create'])->name('dashboard.projetos.create');
+    Route::post('/store', [App\Http\Controllers\Dashboard\ProjetosController::class, 'store'])->name('dashboard.projetos.store');
+    Route::get('/edit/{id}', [App\Http\Controllers\Dashboard\ProjetosController::class, 'edit'])->name('dashboard.projetos.edit');
+    Route::post('/update/{id}', [App\Http\Controllers\Dashboard\ProjetosController::class, 'update'])->name('dashboard.projetos.update');
+    Route::delete('/destroy/{id}', [App\Http\Controllers\Dashboard\ProjetosController::class, 'destroy'])->name('dashboard.projetos.destroy');
+});
+
 require __DIR__.'/auth.php';

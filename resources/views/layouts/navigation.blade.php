@@ -26,6 +26,16 @@
                        
                         </x-slot>
                     </x-nav-link-parent>
+
+                    <x-nav-link-parent :href="route('dashboard.projetos.index')"  :active="request()->routeIs('dashboard.projetos.*')">
+                        <x-slot name="name">Produtos</x-slot>
+                        <x-slot name="children">
+                            <a href="#">Novo</a>
+                            <a href="{{route('dashboard.projetos.index')}}">Listar</a>
+                            
+                       
+                        </x-slot>
+                    </x-nav-link-parent>
                 </div>
             </div>
 
