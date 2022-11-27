@@ -155,6 +155,6 @@ jQuery( window ).on( "load", function() {
  } );
 // HTML document is loaded end
 
-
+onStep();
 window.addEventListener("scroll", onStep);
 

@@ -341,8 +341,8 @@ function onStep(n,e){
 			// fadeOut reveals[i]
 			
 			
-				reveals[that.i].classList.remove(`animated`) ;
-				reveals[that.i].classList.remove(`${reveals[i].getAttribute("data-animation")}`);
+				reveals[i].classList.remove(`animated`) ;
+				reveals[i].classList.remove(`${reveals[i].getAttribute("data-animation")}`);
 			
 			
 		  }

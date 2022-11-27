@@ -39,6 +39,7 @@ Route::get('/projetos', [\App\Http\Controllers\ProjetosController::class, 'index
 Route::get('/grupo-de-produtos/{categoria}', [App\Http\Controllers\CategoriaController::class, 'index'])->name('grupo-de-produtos');
 
 Route::get('/produto/{slug}', [App\Http\Controllers\ProdutosController::class, 'index'])->name('produto');
+Route::get('/projeto/{slug}', [App\Http\Controllers\ProjetosController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

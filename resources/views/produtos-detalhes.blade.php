@@ -27,8 +27,8 @@
     <link href="/css/owl.transitions.css" rel="stylesheet">
     <link href="/css/on3step-style.css" rel="stylesheet">
     <link href="/css/queries-on3step.css" media="all" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/produto.css">
-    <link href="/css/app.css?v=10" rel="stylesheet">
+    <link rel="stylesheet" href="/css/produto.css?v=2">
+    <link href="/css/app.css?v=11" rel="stylesheet">
 </head>
 {{-- se houver flag adicionar class "show" em body --}}
 
@@ -63,6 +63,7 @@
                             <span class="Breadcrumbs_breadcrumbsSeparator__4hftg">/</span>
                         </div>
                         <div class="ProductDetails_productDetailsSliderControls__AXo9_">
+                            <a href="{{route('produto', $produto->anterior()->slug)}}">
                             <svg id="prev_svg__Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 500 500" style="enable-background: new 0 0 500 500;" xml:space="preserve" width="25" height="25">
                                 <style>
                                     .prev_svg__st0,
@@ -82,6 +83,8 @@
                                 </style>
                                 <path d="m338.16 24.56 23.13 20.46-181.35 204.96 181.35 205-23.13 20.46-199.45-225.46z"></path>
                             </svg>
+                        </a>
+                            <a href="{{route('produto', $produto->proximo()->slug)}}">
                             <svg id="next_svg__Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 500 500" style="enable-background: new 0 0 500 500;" xml:space="preserve" width="25" height="25">
                                 <style>
                                     .next_svg__st0,
@@ -101,6 +104,8 @@
                                 </style>
                                 <path d="m161.84 475.44-23.13-20.46 181.35-204.96-181.35-205 23.13-20.46 199.45 225.46z"></path>
                             </svg>
+                        </a>
+                        <a href="/grupo-de-produtos/{{$produto->categoria}}">
                             <svg id="gallery_svg__Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 500 500" style="enable-background: new 0 0 500 500;" xml:space="preserve" width="25" height="25">
                                 <style>
                                     .gallery_svg__st0,
@@ -122,6 +127,7 @@
                                     d="M24 24h130.48v130.48H24zM184.76 24h130.48v130.48H184.76zM345.52 24H476v130.48H345.52zM24 184.76h130.48v130.48H24zM184.76 185.8h130.48v130.48H184.76zM345.52 185.8H476v130.48H345.52zM24 345.52h130.48V476H24zM184.76 345.52h130.48V476H184.76zM345.52 345.52H476V476H345.52z"
                                 ></path>
                             </svg>
+                        </a>
                         </div>
                     </div>
                     <div class="ProductDetails_productDetailsSlider__2dkUy">

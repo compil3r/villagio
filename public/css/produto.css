@@ -43,5 +43,5 @@ time, mark, audio, video {
 
 .compativel a {
     /* return underline */
-    text-decoration: underline;
+    color: #8d8d8d;
 }

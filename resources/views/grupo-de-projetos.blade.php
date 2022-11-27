@@ -20,14 +20,14 @@
    <section class="no-top no-bottom">
     <div class="container-fluid">
         <div class="grid produtos">
-           
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('casacor')">
-                <img src="{{asset('img/uploads/'.$produto->imagem)}}" alt="">
+           @foreach($projetos as $projeto)
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProjeto('{{$projeto->slug}}')">
+                <img src="{{asset('img/projetos/'.$projeto->imagem)}}" alt="">
                 <div class="legenda">
-                    <p>{{$produto->titulo}}</p>
+                    <p>{{$projeto->titulo}}</p>
                 </div>
             </div>
-     
+            @endforeach
         </div>
     </div>
 </section>
@@ -37,8 +37,8 @@
 @endsection
 @section('scripts')
 <script>
-    function irParaProduto(produto){
-        window.location.href = '/produto/'+produto;
+    function irParaProjeto(projeto){
+        window.location.href = '/projeto/'+projeto;
     }
 </script>
 @endsection

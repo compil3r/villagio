@@ -59,6 +59,16 @@ class Produto extends Model
         
     }
 
+    public function proximo() {
+        // return next produto if not last or return first produto
+        return Produto::where('id', '>', $this->id)->first() ?? Produto::first();
+    }
+
+    public function anterior() {
+        // return previous produto if not first or return last produto
+        return Produto::where('id', '<', $this->id)->orderBy('id', 'desc')->first() ?? Produto::orderBy('id', 'desc')->first();
+    }
+
     // compativeis
     public function compativeis()
     {

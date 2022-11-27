@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
+  
 class ProjetosController extends Controller
 {
     /**
@@ -14,7 +17,8 @@ class ProjetosController extends Controller
     public function index()
     {
         
-        return view('grupo-de-projetos');
+        $projetos = \App\Models\Projeto::all();
+        return view('grupo-de-projetos', compact('projetos'));
 
     }
 
@@ -23,9 +27,26 @@ class ProjetosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function show($slug)
     {
-        //
+        $projeto = \App\Models\Projeto::where('slug', $slug)->first();
+        //get all files from folder img/projetos/$projeto->id and put in $imagens
+        
+        $imagens = \File::files(public_path('img/projetos/'.$projeto->id));
+        // dd($imagens[0]->getFilename());
+        // paginate $imagens 
+        $imagens = $this->paginate($imagens, 18);
+        // dd($imagens);
+        // dd($imagens);
+        return view('projeto', compact('projeto', 'imagens'));
+       
+    }
+
+    public function paginate($items, $perPage = 5, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, [ 'path' => Paginator::resolveCurrentPath()]);
     }
 
     /**
@@ -45,10 +66,7 @@ class ProjetosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
