@@ -10,12 +10,12 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <div class="sp-padding pb-0">
-                    <h3 class="bg-dots  onStep"  data-animation="fadeInUp" data-time="500">
+                <div class="sp-padding pb-0 text-center">
+                    {{-- <h3 class="bg-dots  onStep"  data-animation="fadeInUp" data-time="500">
                         Alguma Chamada de Escolha
                         <span class="devider-cont"></span>
-                    </h3>
-                    <div class="onStep"   data-animation="fadeInUp" data-time="600">
+                    </h3> --}}
+                    {{-- <div class="onStep"   data-animation="fadeInUp" data-time="600">
                     <div class="owl-carousel imagem-produtos-container" >
                         <div class="img-item" id="produto1"
                             style="background-image: url({{ asset('img/produtos/slide/1.png') }})">
@@ -29,8 +29,10 @@
                         <div class="img-item" id="produto4"
                             style="background-image: url({{ asset('img/produtos/slide/4.png') }})">
                         </div>
-                    </div>
-                </div>
+                    </div> --}}
+                {{-- </div> --}}
+                {{-- video novaid.mp4 --}}
+                <video style="width: 70%" class="onStep"  data-animation="fadeInUp" data-time="500" src="{{ asset('video/novaid.mp4') }}" autoplay loop muted controls></video>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -171,10 +173,10 @@
                 <div class="col-md-6  grid-1">
                 <div class="container-fluid">
                     <div class="grid produtos">
-                    <div class="grid-item onStep" data-animation="bounceIn" data-time="450" onclick="irParaProduto('acessorios')">
+                    <div class="grid-item onStep" data-animation="bounceIn" data-time="450" onclick="irParaProduto('esquadrias')">
                         <img src="{{asset('img/produtos/destaque/acessorios.png')}}" alt="">
                         <div class="legenda">
-                            <p>Acessórios</p>
+                            <p>Esquadrias</p>
                         </div>
                     </div>
                 </div>
@@ -234,7 +236,7 @@
           <div class="images"><img alt="imgservice" src="{{asset('img/produtos/adega.png')}}" class="w-gallery"></div>
           <h6>Materia Blog 1</h6>
           <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p><a class="shin col px-0" href="#">
+          <p class="saibaMais"><a class="shin col px-0" href="#">
                                 Saiba mais
                                 </a></p>
         </div>
@@ -244,7 +246,7 @@
 
           <h6>Interior Design</h6>
           <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p><a class="shin col px-0" href="#">
+          <p class="saibaMais"><a class="shin col px-0" href="#">
                                   Leia Mais
                                 </a></p>
         </div>
@@ -254,7 +256,7 @@
          
           <h6>Architecture Design</h6>
           <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p><a class="shin col px-0" href="#">
+          <p class="saibaMais"><a class="shin col px-0" href="#">
                                   Leia Mais
                                 </a></p>
         </div>

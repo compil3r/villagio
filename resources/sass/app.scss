@@ -1446,12 +1446,12 @@ i:after {
                 height: 100%;
                 transition: all 0.3s ease-in-out;
                 border: 22px solid white;
-                &:hover {
+                // &:hover {
                     
-                    /* -webkit-box-shadow: inset 0px 0px 0px 10px #f00; */
+                //     /* -webkit-box-shadow: inset 0px 0px 0px 10px #f00; */
                    
-                    box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
-                }
+                //     box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
+                // }
             }
         }
 
@@ -1514,5 +1514,20 @@ p {
         padding: 11px;
         margin-top: 25px;
         text-transform: uppercase;
+    }
+}
+
+.saibaMais {
+    margin-top: 20px;
+    text-align: center;
+    a {
+        border: thin black solid;
+        padding: 10px 20px;
+        transition: all 0.3s ease-in-out;
+        font-size: 1.4rem;
+        &:hover {
+            background-color: black;
+            color: white;
+        }
     }
 }

@@ -1173,10 +1173,6 @@ i:after {
   transition: all 0.3s ease-in-out;
   border: 22px solid white;
 }
-.grid-4 .grid.produtos .grid-item .grid-text:hover {
-  /* -webkit-box-shadow: inset 0px 0px 0px 10px #f00; */
-  box-shadow: inset 0px 0px 0px 1px rgb(0, 0, 0);
-}
 
 .grid-1 {
   padding-left: 0;
@@ -1225,4 +1221,19 @@ i:after {
   padding: 11px;
   margin-top: 25px;
   text-transform: uppercase;
+}
+
+.saibaMais {
+  margin-top: 20px;
+  text-align: center;
+}
+.saibaMais a {
+  border: thin black solid;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.4rem;
+}
+.saibaMais a:hover {
+  background-color: black;
+  color: white;
 }
