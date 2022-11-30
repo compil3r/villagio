@@ -5,7 +5,7 @@ body {
 }
 
 .white {
-  top: -2px !important;
+  top: -19px !important;
   left: -29px;
 }
 
@@ -21,6 +21,7 @@ body {
 .subnav {
   width: 40%;
   padding-bottom: 20px;
+  border-bottom: none;
 }
 
 .no-section-image .subnav {
@@ -541,7 +542,7 @@ footer img {
 }
 
 header.choc.show {
-  height: 50px;
+  height: 90px;
   background: rgb(255, 255, 255) !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -1236,4 +1237,18 @@ i:after {
 .saibaMais a:hover {
   background-color: black;
   color: white;
+}
+
+.navbar-default-white {
+  margin: 35px auto;
+}
+
+.show .social-icons-subnav span {
+  color: rgb(0, 0, 0);
+}
+.show img.black {
+  display: none !important;
+}
+.show img.white {
+  display: block !important;
 }

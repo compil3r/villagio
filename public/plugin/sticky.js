@@ -34,7 +34,7 @@ var sticky = (function(){
 		var scrollPos = $window.scrollTop();
 		
 		if((scrollPos && jQuery(window).width() > 1199) >= stickyPos){
-			 $stickyNav.addClass('sticky');
+			 $stickyNav.addClass('stocky');
 			 headernav.addClass('show');
 
 			//  if (brandwhite.length === 0) {
@@ -46,9 +46,9 @@ var sticky = (function(){
 			//  	brandgold.hide();
 			//  }
 
-			 subnav.fadeOut(100);
+			 
 		}else{
-			$stickyNav.removeClass('sticky');
+			$stickyNav.removeClass('stocky');
 			headernav.removeClass('show');
 
 			// if (brandwhite.length === 0) {
@@ -59,7 +59,7 @@ var sticky = (function(){
 			// 	brandwhite.hide();
 			// 	brandgold.show();
 			// }
-		    subnav.fadeIn(200);
+		  
 		}
 		if (jQuery(window).width() < 1200) {
         	// if (brandwhite.length === 0) {

@@ -20,7 +20,7 @@ jQuery( window ).on( "load", function() {
         var menumobile = jQuery( '#main-menu' );
         var navdefault = jQuery( '.navbar-default-white' );
         var Navactive = jQuery( "nav a" );
-        var subnav = jQuery( ".subnav" );
+        var subnav = jQuery( ".subnavz" );
         var mainmenudrop = jQuery('#main-menu .menu');
         
         $(window).resize(function() {
