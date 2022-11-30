@@ -154,7 +154,7 @@
                                     <li>
                                         <a href="/franquias" >
                                             <div class="box">
-                                                <div data-hover="Franquias">Franquias</div>
+                                                <div data-hover="Franquias">Lojas Exclusivas</div>
                                             </div>
                                         </a>
                                     </li>
