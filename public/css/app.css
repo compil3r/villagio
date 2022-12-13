@@ -5,7 +5,7 @@ body {
 }
 
 .white {
-  top: -19px !important;
+  top: -2px !important;
   left: -29px;
 }
 
@@ -16,17 +16,16 @@ body {
   line-height: 30px;
   padding-bottom: 0;
   padding-top: 0;
+  color: rgb(0, 0, 0);
 }
 
 .subnav {
   width: 40%;
   padding-bottom: 20px;
   border-bottom: none;
+  transition: all 0.3s;
 }
 
-.no-section-image .subnav {
-  border-bottom: 1px solid #202020;
-}
 .no-section-image .subnav a {
   color: #202020;
 }
@@ -103,33 +102,6 @@ img.black {
   display: block !important;
 }
 
-.no-section-image .white li a, .no-section-image .white li a:hover, .no-section-image .white li a.actived {
-  color: black;
-}
-.no-section-image .white li a:before {
-  background: black;
-  border-bottom: thin solid black !important;
-}
-.no-section-image .sticky .white li a, .no-section-image .sticky .white li a:hover, .no-section-image .sticky .white li a.actived {
-  color: white;
-}
-.no-section-image .sticky .white li a:before {
-  background: white;
-  border-bottom: thin solid white !important;
-}
-.no-section-image .sticky img.white {
-  display: none;
-}
-.no-section-image .sticky img.black {
-  display: block;
-}
-.no-section-image .navbar-brand.white img.white {
-  display: block !important;
-}
-.no-section-image .navbar-brand.white img.black {
-  display: none;
-}
-
 #overlay {
   width: 100%;
   height: 100%;
@@ -140,6 +112,10 @@ img.black {
 }
 #overlay.bottom {
   background: linear-gradient(rgba(0, 0, 0, 0.83), 11%, rgba(0, 0, 0, 0), 70%, rgb(0, 0, 0));
+}
+
+.navbar-brand.white {
+  transition: all 0.3s;
 }
 
 .navbar-brand.white img {
@@ -482,10 +458,10 @@ footer img {
     transform: translate3d(0, 0, 0);
   }
   .no-section-image .box div::before {
-    color: black;
+    color: rgb(255, 255, 255);
   }
   .no-section-image .sticky .box div::before {
-    color: white;
+    color: rgb(0, 0, 0);
   }
   .box div {
     position: relative;
@@ -543,11 +519,10 @@ footer img {
 
 header.choc.show {
   height: 90px;
-  background: rgb(255, 255, 255) !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background: rgb(0, 0, 0) !important;
 }
 header.choc.show #menu-center a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 footer.choc {
@@ -650,7 +625,7 @@ footer.choc {
   flex: 1 0 33%;
   border: 10px solid white;
   padding: 10px;
-  height: 300px;
+  height: 250px;
   margin-bottom: -5px;
   cursor: pointer;
 }
@@ -735,7 +710,6 @@ footer.choc {
   width: 50%;
   height: 250px;
   position: static;
-  right: transfor;
   /* max-width: 275px; */
   /* min-height: 200px; */
   /* top: 33px; */
@@ -887,7 +861,7 @@ footer .spacer40 {
   height: 40px;
   width: 100%;
   content: " ";
-  display: table;
+  display: block;
   clear: both;
 }
 footer .address p {
@@ -914,6 +888,7 @@ footer .logo-container {
   position: absolute;
   right: 0;
   bottom: 0;
+  text-align: right;
 }
 
 .bg-dots {
@@ -1183,7 +1158,7 @@ i:after {
 }
 .grid-1 .grid.produtos .grid-item {
   flex: 1 0 100%;
-  height: 600px;
+  height: 500px;
   border: none;
   margin-bottom: 0px;
 }
@@ -1198,6 +1173,12 @@ i:after {
 }
 .grid-1 .grid.produtos .grid-item .legenda p {
   font-weight: 700;
+}
+.grid-1 .grid.produtos .grid-item .legenda:hover {
+  background-color: black;
+}
+.grid-1 .grid.produtos .grid-item .legenda:hover p {
+  color: white;
 }
 
 .content-wrapper {
@@ -1243,12 +1224,51 @@ i:after {
   margin: 35px auto;
 }
 
-.show .social-icons-subnav span {
-  color: rgb(0, 0, 0);
-}
-.show img.black {
+.navbar-brand.white img.black {
   display: none !important;
 }
-.show img.white {
+.navbar-brand.white img.white {
   display: block !important;
+}
+
+.navbar-default-white .white nav a {
+  color: white;
+}
+.navbar-default-white img.black, .navbar-default-white .navbar-brand.white img.black {
+  display: block !important;
+}
+.navbar-default-white img.white, .navbar-default-white .navbar-brand.white img.white {
+  display: none !important;
+}
+
+.no-section-image .navbar-default-white .white nav a {
+  color: black;
+}
+.no-section-image .box div::before {
+  color: black;
+}
+.no-section-image img.black, .no-section-image .navbar-brand.white img.black {
+  display: none !important;
+}
+.no-section-image img.white, .no-section-image .navbar-brand.white img.white {
+  display: block !important;
+}
+
+.show .navbar-default-white {
+  margin: 20px auto;
+}
+.show .subnav {
+  margin-top: -60px;
+}
+.show .social-icons-subnav span {
+  color: rgb(255, 255, 255);
+}
+.show img.black, .show .navbar-brand.white img.black {
+  display: block !important;
+}
+.show img.white, .show .navbar-brand.white img.white {
+  display: none !important;
+}
+.show .box div::before {
+  color: white;
 }

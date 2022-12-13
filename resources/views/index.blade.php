@@ -126,7 +126,7 @@
 </section>
 
 <!-- section about -->
-<section id="about-us-1" class="h-bg col-content color-page">
+<section id="about-us-1" class="h-bg col-content color-page pt-0">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 grid-4"> 
@@ -230,7 +230,7 @@
   <!-- about home -->
   <section class="bgsubgray p-relative" aria-label="about">
     <div class="container-fluid">
-      <div class="row p-180">
+      <div class="row p-180 pt-0">
 
         <div class="col-md-4 mb-md-0 mb-5 onStep" data-animation="fadeIn" data-time="500">
           <div class="images"><img alt="imgservice" src="{{asset('img/produtos/adega.png')}}" class="w-gallery"></div>
@@ -247,7 +247,7 @@
           <h6>Interior Design</h6>
           <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
           <p class="saibaMais"><a class="shin col px-0" href="#">
-                                  Leia Mais
+                                  Saiba Mais
                                 </a></p>
         </div>
 
@@ -257,7 +257,7 @@
           <h6>Architecture Design</h6>
           <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
           <p class="saibaMais"><a class="shin col px-0" href="#">
-                                  Leia Mais
+                                  Saiba Mais
                                 </a></p>
         </div>
 

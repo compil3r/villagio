@@ -87,10 +87,10 @@
             
               </address>
 
-              <div class="icon-localizacao eut-hover-effect">
+              <a target="_blank" href="https://www.google.com.br/maps/place/VILLAGGIO/@-29.5961715,-51.1361147,17z/data=!3m1!4b1!4m5!3m4!1s0x9519453f21a1835b:0x2b863fc253bd8a1f!8m2!3d-29.5961762!4d-51.133926" class="icon-localizacao eut-hover-effect">
                 <i class="ti-location-pin">
                 </i>
-              </div>
+              </a>
 
               <div class="trabalheConosco">
                 <h2>Trabalhe Conosco</h2>
