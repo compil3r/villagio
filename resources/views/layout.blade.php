@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
-    <title>Villaggio Alumunios | Página Inicial</title>
-    <meta content="" name="description">
+    <title>Villaggio Alumínios | Página Inicial</title>
+    <meta content="A Villaggio é uma das mais tradicionais marcas de vidro e alumínio para o setor moveleiro e construção civil do país. Inspirados no design europeu, somos uma empresa brasileira com raízes italianas que atua no mercado há mais de 23 anos. Possuímos um dos mais modernos parques tecnológicos do setor, com máquinas e equipamentos de última geração. Oferecemos soluções inteligentes e acabamentos impecáveis, sempre alinhados a processos produtivos ecologicamente corretos." name="description">
     <meta content="" name="author">
-    <meta content="" name="keywords">
+    <meta content="aluminios, ivoti, placas, metal, vidro" name="keywords">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <meta name="google-site-verification" content="Jq8fGYCyya563ZYJ633wl1S_kcZV3mA_xI4iz7Ug0qM" >
  

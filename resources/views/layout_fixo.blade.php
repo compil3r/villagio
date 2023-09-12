@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Villaggio Alumunios | Página Inicial</title>
+    <title>Villaggio Alumínios | Página Inicial</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
