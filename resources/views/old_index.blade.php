@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Villagio Alumunios | Página Inicial</title>
+    <title>Villaggio Alumunios | Página Inicial</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
@@ -918,15 +918,15 @@
     <script src="js/app.js?v=2"></script>
     
     <script>
-     var windowWidth = $(window).width();
-       var windowHeight = $(window).height();
+//      var windowWidth = $(window).width();
+//        var windowHeight = $(window).height();
 
-        $(window).resize(function() {
-            if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
-                location.reload();
-                return;
-        }
-  });
+//         $(window).resize(function() {
+//             if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+//                 location.reload();
+//                 return;
+//         }
+//   });
 
   //on click in #icone-play open modal video and play video
     $('#icone-play').click(function(){  

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Acabamento;
+use App\Models\ItemAcabamento;
+use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
@@ -14,23 +17,30 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($categoria)
+    public function index($c)
     {
-        $categorias = [
-            'solucoes-inteligentes' => ['id' => 'solucoes-inteligentes', 'nome' => 'Solucões Inteligentes'],
-            'perfis-para-portas' => ['id' => 'perfis-para-portas', 'nome' => 'Perfis para Portas'],
-            'puxadores' => ['id' => 'puxadores', 'nome' => 'Puxadores'],
-            'divisorias-de-ambientes' => ['id' => 'divisorias-de-ambientes', 'nome' => 'Divisórias de Ambientes'],
-            'acessorios' => ['id' => 'acessorios', 'nome' => 'Acessórios'],
-            'acabamentos' => ['id' => 'acabamentos', 'nome' => 'Acabamentos'],
-            'sistemas' => ['id' => 'sistemas', 'nome' => 'Sistemas'],
-            'esquadrias' => ['id' => 'esquadrias', 'nome' => 'Esquadrias']
+        $categoria = Categoria::where('slug', $c)->first(); 
 
-        ];
-    
-        $produtos = \App\Models\Produto::where('categoria', $categoria)->get();
-        $nome = $categorias[$categoria]['nome'];
-        return view('grupo-de-produtos', compact('produtos','nome'));
+        if($c != "acabamentos") {
+            $produtos = \App\Models\Produto::where('categoria_id', $categoria->id)->get();
+            $nome = $categoria->titulo;
+            return view('grupo-de-produtos', compact('produtos','nome'));
+        } else {
+            return view('acabamentos');
+        }
+    }
+
+    public function acabamentos() {
+        $acabamentos = Acabamento::all();
+
+        return view('produtos.acabamentos.index', compact('acabamentos'));
+    }
+
+    public function indexAcabamento($slug) {
+        $acabamento = Acabamento::where('slug', $slug)->first();
+        $itens = ItemAcabamento::where('acabamento_id', $acabamento->id)->get();
+        
+        return view('produtos.acabamentos.show', compact('acabamento', 'itens'));
     }
 
     /**

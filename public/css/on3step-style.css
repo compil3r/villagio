@@ -60,7 +60,7 @@ body {
     line-height: 2.1428;
     font-style: normal;
     font-weight: normal;
-    color: #333;
+    color: rgb(0, 0, 0);
     background: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

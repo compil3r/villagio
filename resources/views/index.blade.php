@@ -96,29 +96,18 @@
         <!-- section end --> --}}
 
 
-<section id="call-action" class="col-content white-bg">
+<section id="call-action" class="col-content white-bg" style="padding-bottom: 10%; ">
     <div class="container-fluid m-5-hor">
-        <div class="row p-180">
-            <div class="col-md-6 onStep" data-animation="fadeInLeft" data-time="500">
-                <div class="sp-padding">
-                    <h2 class="full">
-                        Nós somos um time <strong>criativo</strong> para construir seu sonho ou sua estrutura.
-                        <span class="devider-cont"></span>
-                    </h2>
-
+        <div class="row p-180" style="display: flex">
+            <div class="col-md-7 onStep" data-animation="fadeInLeft" data-time="500">
+                <div class="sp-padding" style="overflow: initial; padding: 0; padding-right: 60px;">
+                    <img style="width: 100%" src="{{ asset('img/uploads/' . $inicial->imagemInicial) }}" alt="logo" class="img-fluid">
                 </div>
             </div>
 
-            <div class="col-md-6 onStep" data-animation="fadeInRight" data-time="500">
-                <div class="sp-padding-no-hide">
-                    <p>
-                        A Villaggio é uma das <strong>mais tradicionais marcas de vidro e alumínio para o setor
-                            moveleiro do país</strong>. Inspirados no design europeu, somos uma empresa brasileira com
-                        raízes italianas que atua no mercado há mais de 22 anos.
-                        Possuímos um dos mais modernos parques tecnológicos do setor, com máquinas e equipamentos de
-                        última geração para oferecer soluções inteligentes e acabamentos impecáveis, tudo isso alinhados
-                        a processos produtivos ecologicamente corretos.
-                    </p>
+            <div class="col-md-5 onStep" style="text-align: left; display: flex; align-items: end;" data-animation="fadeInRight" data-time="500">
+                <div class="sp-padding-no-hide" style="padding-bottom: 37px">
+                  {!!$inicial->textoInicial!!}
                 </div>
             </div>
         </div>
@@ -126,45 +115,34 @@
 </section>
 
 <!-- section about -->
-<section id="about-us-1" class="h-bg col-content color-page pt-0">
+<section id="about-us-1" class="h-bg col-content color-page pt-0" style="height: auto; padding-bottom: 10% ">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 grid-4"> 
                 <div class="container-fluid">
                     <div class="grid produtos">
-                        <div class="grid-item onStep" data-animation="bounceIn" data-time="400" onclick="irParaProduto('solucoes-inteligentes')">
-                            <img src="{{asset('img/produtos/destaque/solucoes.png')}}" alt="">
+                        <div class="grid-item onStep" data-animation="bounceIn" data-time="400" onclick="irParaProduto('{{$inicial->link1}}')" style="height: 20vw">
+                            <img src="{{asset('img/uploads/' . $inicial->imagem1)}}" alt="">
                             <div class="legenda">
-                                <p>Soluções Inteligentes</p>
+                                <p>{{$inicial->titulo1}}</p>
                             </div>
                         </div>
-                        <div class="grid-item onStep " data-animation="bounceIn" data-time="500" onclick="irParaProduto('perfis-para-portas')">
-                            {{-- just text --}}
-                            <div class="grid-text">
-                                <span>
-                                    Perfis para Portas
-                                </span>
-                                   
-
-                            </div>
-                         
-                        </div>
-                        <div class="grid-item onStep " data-animation="bounceIn" data-time="600" onclick="irParaProduto('perfis-para-portas')">
-                            {{-- just text --}}
-                            <div class="grid-text">
-                                <span>
-                                    DIVISÓRIAS DE AMBIENTES
-                                   
-                                </span>
-                                   
-
-                            </div>
-                         
-                        </div>
-                        <div class="grid-item onStep" data-animation="bounceIn" data-time="650" onclick="irParaProduto('divisorias-de-ambientes')">
-                            <img src="{{asset('img/produtos/destaque/divisorias.png')}}" alt="">
+                        <div class="grid-item onStep" data-animation="bounceIn" data-time="400" onclick="irParaProduto('{{$inicial->link2}}')" style="height: 20vw">
+                            <img src="{{asset('img/uploads/' . $inicial->imagem2)}}" alt="">
                             <div class="legenda">
-                                <p>Divisórias de Ambientes</p>
+                                <p>{{$inicial->titulo2}}</p>
+                            </div>
+                        </div>
+                        <div class="grid-item onStep" data-animation="bounceIn" data-time="400" onclick="irParaProduto('{{$inicial->link3}}')" style="height: 20vw">
+                            <img src="{{asset('img/uploads/' . $inicial->imagem3)}}" alt="">
+                            <div class="legenda">
+                                <p>{{$inicial->titulo3}}</p>
+                            </div>
+                        </div>
+                        <div class="grid-item onStep" data-animation="bounceIn" data-time="650" onclick="irParaProduto('{{$inicial->link4}}')" style="height: 20vw">
+                            <img src="{{asset('img/uploads/' . $inicial->imagem4)}}" alt="">
+                            <div class="legenda">
+                                <p>{{$inicial->titulo4}}</p>
                             </div>
                         </div>
                     </div>
@@ -173,10 +151,10 @@
                 <div class="col-md-6  grid-1">
                 <div class="container-fluid">
                     <div class="grid produtos">
-                    <div class="grid-item onStep" data-animation="bounceIn" data-time="450" onclick="irParaProduto('esquadrias')">
-                        <img src="{{asset('img/produtos/destaque/acessorios.png')}}" alt="">
+                    <div class="grid-item onStep" data-animation="bounceIn" data-time="450" onclick="irParaProduto('{{$inicial->link5}}')" style="height: 40vw">
+                        <img src="{{asset('img/uploads/' . $inicial->imagem5)}}" alt="">
                         <div class="legenda">
-                            <p>Esquadrias</p>
+                            <p>{{$inicial->titulo5}}</p>
                         </div>
                     </div>
                 </div>
@@ -228,39 +206,34 @@
 
 <!-- gallery -->
   <!-- about home -->
-  <section class="bgsubgray p-relative" aria-label="about">
+  <section class="bgsubgray p-relative pt-0" aria-label="about">
     <div class="container-fluid">
       <div class="row p-180 pt-0">
-
+        @foreach($posts as $post)
         <div class="col-md-4 mb-md-0 mb-5 onStep" data-animation="fadeIn" data-time="500">
-          <div class="images"><img alt="imgservice" src="{{asset('img/produtos/adega.png')}}" class="w-gallery"></div>
-          <h6>Materia Blog 1</h6>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p class="saibaMais"><a class="shin col px-0" href="#">
-                                Saiba mais
+          <div class="images"><img alt="imgservice" src="{{asset('img/uploads/' . $post->imagem)}}" class="w-gallery"></div>
+          <h6 style="font-size: 20px">{{$post->titulo}}</h6>
+          <span class="date-post" style="margin-left: 0; color: rgb(77, 77, 77)"><i class="ti-calendar" style="margin-right: 5px"></i>{{$post->created_at->format('d/m/Y')}}</span>
+          <span class="date-post"><i class="ti-tag" style="margin-right: 0px; color: rgb(77, 77, 77)"></i>
+            {{-- break tags in comma and foreach --}}
+            @foreach(explode(',', $post->tags) as $tag)
+
+
+              <a href="{{url("blog/tag/" . str_replace('#', '', trim($tag)))}}">{{$tag}}</a>
+            @endforeach
+          </span>
+        
+        
+            <p style="font-weight: 500">{{$post->descricao}}</p>
+
+
+          
+          <p class="saibaMais"><a class="shin col px-0" href="{{url("blog/" . $post->id)}}">
+                               Leia Mais
                                 </a></p>
         </div>
-
-        <div class="col-md-4 mb-md-0 mb-5 onStep" data-animation="fadeIn" data-time="500">
-            <div class="images"><img alt="imgservice" src="{{asset('img/produtos/cabina.png')}}" class="w-gallery"></div>
-
-          <h6>Interior Design</h6>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p class="saibaMais"><a class="shin col px-0" href="#">
-                                  Saiba Mais
-                                </a></p>
-        </div>
-
-        <div class="col-md-4 onStep" data-animation="fadeIn" data-time="500">
-            <div class="images"><img alt="imgservice" src="{{asset('img/produtos/del_metallo.png')}}" class="w-gallery"></div>
-         
-          <h6>Architecture Design</h6>
-          <p>Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-          <p class="saibaMais"><a class="shin col px-0" href="#">
-                                  Saiba Mais
-                                </a></p>
-        </div>
-
+        @endforeach
+    
       </div>
     </div>
   </section>
@@ -289,7 +262,7 @@
 
     <script>
         function irParaProduto(produto) {
-            window.location.href = '/grupo-de-produtos/' + produto;
+            window.location.href = produto;
         }
     </script>
 @section('scripts')

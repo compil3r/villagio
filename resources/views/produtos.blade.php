@@ -28,54 +28,16 @@
    <section class="no-top no-bottom">
     <div class="container-fluid">
         <div class="grid produtos">
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('solucoes-inteligentes')">
-                <img src="{{asset('img/produtos/destaque/solucoes.png')}}" alt="">
+            @foreach($categorias as $categoria)
+    
+            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('{{$categoria->slug}}')">
+                <img src="{{asset('img/uploads/categorias/' . $categoria->imagem)}}" alt="">
                 <div class="legenda">
-                    <p>Soluções Inteligentes</p>
+                    <p>{{$categoria->titulo}}</p>
                 </div>
             </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('perfis-para-portas')">
-                <img src="{{asset('img/produtos/destaque/perfis.png')}}" alt="">
-                <div class="legenda">
-                    <p>Perfis para Portas</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('puxadores')">
-                <img src="{{asset('img/produtos/destaque/puxadores.png')}}" alt="">
-                <div class="legenda">
-                    <p>Puxadores</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('divisorias-de-ambientes')">
-                <img src="{{asset('img/produtos/destaque/divisorias.png')}}" alt="">
-                <div class="legenda">
-                    <p>Divisórias de Ambientes</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('acessorios')">
-                <img src="{{asset('img/produtos/destaque/acessorios.png')}}" alt="">
-                <div class="legenda">
-                    <p>Acessórios</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('acabamentos')">
-                <img src="{{asset('img/produtos/destaque/acabamentos.png')}}" alt="">
-                <div class="legenda">
-                    <p>Acabamentos</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('sistemas')">
-                <img src="{{asset('img/produtos/destaque/sistemas.png')}}" alt="">
-                <div class="legenda">
-                    <p>Sistemas</p>
-                </div>
-            </div>
-            <div class="grid-item onStep" data-animation="fadeIn" data-time="500" onclick="irParaProduto('esquadrias')">
-                <img src="{{asset('img/produtos/destaque/esquadrias.png')}}" alt="">
-                <div class="legenda">
-                    <p>Esquadrias</p>
-                </div>
-            </div>
+            @endforeach
+            
         </div>
     </div>
 </section>

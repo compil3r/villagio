@@ -10,6 +10,9 @@
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap');
+        </style>
         <!-- Scripts -->
         <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
 
@@ -35,10 +38,19 @@
     <script src="{{ asset('node_modules/tinymce/tinymce.js') }}"></script>
     <script>
     tinymce.init({
+        toolbar: 'undo redo | blocks | ' +
+  'bold italic backcolor fontfamily | alignleft aligncenter ' +
+  'alignright alignjustify | bullist numlist outdent indent | ' +
+  'removeformat | help',
         selector:'textarea.description',
         width: 900,
         height: 300,
-        plugins: 'link',
+        plugins: 'link image',
+        images_upload_url: '/postAcceptor',
+        content_style:
+        `@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap'); body { font-family: 'Montserrat', sans-serif; } h1,h2,h3,h4,h5,h6 { font-family: 'Lato', sans-serif; }`,
+        font_family_formats:
+        "Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Montserrat=montserrat; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats"
     });
 
     function addCompativel() {
@@ -133,7 +145,7 @@
         
         // select para grupo com opcoes (Perfil, Acabamento, Puxador, Sistema, Divisor)
         var grupo = document.createElement('select');
-        grupo.setAttribute('name', 'grupo[]');
+        grupo.setAttribute('name', 'grupos[]');
         grupo.setAttribute('class', 'form-control');
         grupo.classList.add('w-1/4', 'mr-2');
         grupo.setAttribute('style', 'margin-bottom: 10px;');

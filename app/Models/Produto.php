@@ -22,6 +22,10 @@ class Produto extends Model
         });
     }
 
+    public function categoria() {
+        return $this->belongsTo(Categoria::class);
+    }
+    
     public function createSlug($titulo)
     {
         $slug = Str::slug($titulo, "-");

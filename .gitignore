@@ -19,3 +19,4 @@ yarn-error.log
 .gitignore
 composer-setup.php
 public/video/novaid.mp4
+public/node_modules

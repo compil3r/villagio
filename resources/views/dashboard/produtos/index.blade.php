@@ -28,7 +28,7 @@
                                         <img src="{{asset('img/uploads/'.$produto->imagem)}}" alt="" class="w-20">
                                     </td>
                                     <td class="border px-4 py-2">{{$produto->titulo}}</td>
-                                    <td class="border px-4 py-2">{{$produto->getCategoriaCompletaAttribute()}}</td>
+                                    <td class="border px-4 py-2">{{$produto->categoria->titulo}}</td>
                                     <td class="border px-4 py-2">
                                         <a href="{{route('dashboard.produtos.edit', $produto->id)}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Editar</a>
                                         <form action="{{route('dashboard.produtos.destroy', $produto->id)}}" method="POST" class="inline">

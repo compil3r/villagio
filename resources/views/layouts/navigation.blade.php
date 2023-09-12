@@ -20,22 +20,43 @@
                     <x-nav-link-parent :href="route('dashboard.produtos.index')"  :active="request()->routeIs('dashboard.produtos.*')">
                         <x-slot name="name">Produtos</x-slot>
                         <x-slot name="children">
-                            <a href="#">Novo</a>
-                            <a href="{{route('dashboard.produtos.index')}}">Listar</a>
-                            
+                            <a href="{{route('dashboard.produtos.create')}}">Novo produto</a>
+                            <a href="{{route('dashboard.produtos.index')}}">Todos os produtos</a>
+                            <a href="{{route('dashboard.categorias.index')}}">Categorias</a>
                        
                         </x-slot>
                     </x-nav-link-parent>
 
                     <x-nav-link-parent :href="route('dashboard.projetos.index')"  :active="request()->routeIs('dashboard.projetos.*')">
-                        <x-slot name="name">Produtos</x-slot>
+                        <x-slot name="name">Projetos</x-slot>
                         <x-slot name="children">
-                            <a href="#">Novo</a>
+                            <a href="{{route('dashboard.projetos.create')}}">Novo</a>
+
                             <a href="{{route('dashboard.projetos.index')}}">Listar</a>
                             
                        
                         </x-slot>
                     </x-nav-link-parent>
+
+                    {{-- Acabamentos --}}
+                    <x-nav-link-parent :href="route('dashboard.acabamentos.index')"  :active="request()->routeIs('dashboard.acabamentos.*')">
+                        <x-slot name="name">Acabamentos</x-slot>
+                        <x-slot name="children">
+                            <a href="{{route('dashboard.acabamentos.create')}}">Novo</a>
+                            <a href="{{route('dashboard.acabamentos.index')}}">Listar</a>
+                        </x-slot>
+                    </x-nav-link-parent>
+
+                    <x-nav-link-parent >
+                        <x-slot name="name">Outros</x-slot>
+                        <x-slot name="children">
+                            <a href="{{route('dashboard.anos.index')}}">Linha do Tempo</a>
+                            <a href="{{route('dashboard.posts.index')}}">Blog</a>
+                            <a href="{{route('dashboard.telaInicial.index')}}">Tela Inicial</a>
+                            <a href="{{route('dashboard.destaque.index')}}">Destaques</a>
+                        </x-slot>
+                    </x-nav-link-parent>
+                    
                 </div>
             </div>
 

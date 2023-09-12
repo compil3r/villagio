@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Produto;
+use App\Models\Categoria;
 use App\Models\Imagem;
 use Illuminate\Support\Facades\Storage;
 //file
@@ -20,6 +21,9 @@ class ProdutosController extends Controller
     public function index()
     {
         $produtos = \App\Models\Produto::all();
+        
+        
+
         return view('dashboard.produtos.index', compact('produtos'));
     }
 
@@ -32,17 +36,7 @@ class ProdutosController extends Controller
     {
 
         //array of mock objects categorias with id and name
-        $categorias = [
-            (object) ['id' => 'solucoes-inteligentes', 'nome' => 'Solucões Inteligentes'],
-            (object) ['id' => 'perfis-para-portas', 'nome' => 'Perfis para Portas'],
-            (object) ['id' => 'puxadores', 'nome' => 'Puxadores'],
-            (object) ['id' => 'divisorias-de-ambientes', 'nome' => 'Divisórias de Ambientes'],
-            (object) ['id' => 'acessorios', 'nome' => 'Acessórios'],
-            (object) ['id' => 'acabamentos', 'nome' => 'Acabamentos'],
-            (object) ['id' => 'sistemas', 'nome' => 'Sistemas'],
-            (object) ['id' => 'esquadrias', 'nome' => 'Esquadrias'],
-
-        ];
+        $categorias = Categoria::all();
 
         return view('dashboard.produtos.create', compact('categorias'));
     }
@@ -69,7 +63,7 @@ class ProdutosController extends Controller
         $produto->descricao = $request->descricao;
         $produto->utilizacao = $request->utilizacao;
  
-        $produto->categoria = $request->categoria;
+        $produto->categoria_id = $request->categoria;
         //imagem upload
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $requestImage = $request->imagem;
@@ -141,26 +135,13 @@ class ProdutosController extends Controller
     public function edit($id)
     {
         //
-        $categorias = [
-            (object) ['id' => 'solucoes-inteligentes', 'nome' => 'Solucões Inteligentes'],
-            (object) ['id' => 'perfis-para-portas', 'nome' => 'Perfis para Portas'],
-            (object) ['id' => 'puxadores', 'nome' => 'Puxadores'],
-            (object) ['id' => 'divisorias-de-ambientes', 'nome' => 'Divisórias de Ambientes'],
-            (object) ['id' => 'acessorios', 'nome' => 'Acessórios'],
-            (object) ['id' => 'acabamentos', 'nome' => 'Acabamentos'],
-            (object) ['id' => 'sistemas', 'nome' => 'Sistemas'],
-            (object) ['id' => 'esquadrias', 'nome' => 'Esquadrias'],
-
-        ];
+        $categorias = Categoria::all();
 
         $produto = \App\Models\Produto::find($id);
         
         $produtos = \App\Models\Produto::all();
-        //array of mock objects categorias with id and name
-        
-
+    
         return view('dashboard.produtos.edit', compact('produto', 'categorias', 'produtos'));
-
     }
 
     /**
@@ -186,7 +167,7 @@ class ProdutosController extends Controller
         $produto->descricao = $request->descricao;
         $produto->utilizacao = $request->utilizacao;
         
-        $produto->categoria = $request->categoria;
+        $produto->categoria_id = $request->categoria;
         //imagem upload
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
             $requestImage = $request->imagem;
@@ -218,14 +199,14 @@ class ProdutosController extends Controller
 
             foreach ($request->nameCompativel as $index => $compativeis) {
                 if($request->tipoCompativel[$index] == 'link') {
-                    $compativeisArray[] = ['compativel_id' => $request->linkCompativel[$index], 'tipo' => 'produto', 'nome' => $request->nameCompativel[$index], 'grupo' => $request->grupo[$index]];
+                    $compativeisArray[] = ['compativel_id' => $request->linkCompativel[$index], 'tipo' => 'produto', 'nome' => $request->nameCompativel[$index], 'grupo' => $request->grupos[$index]];
                 } else {
                     // upload image inside $request->imagemCompativel[$index]
                     $requestImage = $request->ImagemCompativel[$index];
                     $extension = $requestImage->extension();
                     $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
                     $requestImage->move(public_path('img/uploads'), $imageName);
-                    $compativeisArray[] = ['imagem' => $imageName, 'tipo' => 'imagem', 'nome' => $request->nameCompativel[$index], 'grupo' => $request->grupo[$index]];
+                    $compativeisArray[] = ['imagem' => $imageName, 'tipo' => 'imagem', 'nome' => $request->nameCompativel[$index], 'grupo' => $request->grupos[$index]];
                 }
             }
 

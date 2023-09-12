@@ -68,9 +68,11 @@ body {
   left: 20px;
   right: 100%;
   bottom: 4%;
-  background: #fff; /*** COLOR OF THE LINE ***/
+  background: #fff;
+  /*** COLOR OF THE LINE ***/
   border-bottom: thin solid #fff !important;
-  height: 0px; /*** THICKNESS OF THE LINE ***/
+  height: 0px;
+  /*** THICKNESS OF THE LINE ***/
   transition-property: right;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
@@ -622,12 +624,15 @@ footer.choc {
   flex-wrap: wrap;
 }
 .grid .grid-item {
-  flex: 1 0 33%;
+  flex: 1 1 33%;
   border: 10px solid white;
   padding: 10px;
   height: 250px;
   margin-bottom: -5px;
   cursor: pointer;
+}
+.grid .grid-item.acabamentos {
+  flex: 0 1 20%;
 }
 .grid .grid-item img {
   width: 100%;
@@ -755,17 +760,17 @@ footer.choc {
   width: 100%;
 }
 
-.produtos .grid-item {
+.produtos .grid-item, .acabamentos .grid-item {
   padding: 0;
   overflow: hidden;
   position: relative;
 }
-.produtos .grid-item img {
+.produtos .grid-item img, .acabamentos .grid-item img {
   transition: all 0.3s ease-in-out;
   transform: scale(1.2);
   filter: grayscale(0%);
 }
-.produtos .grid-item .legenda {
+.produtos .grid-item .legenda, .acabamentos .grid-item .legenda {
   position: absolute;
   padding: 30px;
   left: 0;
@@ -780,14 +785,14 @@ footer.choc {
   font-weight: 700;
   text-align: center;
 }
-.produtos .grid-item .legenda p {
+.produtos .grid-item .legenda p, .acabamentos .grid-item .legenda p {
   text-transform: uppercase;
   font-weight: 400;
 }
-.produtos .grid-item:hover img {
+.produtos .grid-item:hover img, .acabamentos .grid-item:hover img {
   transform: scale(1);
 }
-.produtos .grid-item:hover .legenda {
+.produtos .grid-item:hover .legenda, .acabamentos .grid-item:hover .legenda {
   transform: translateY(0);
 }
 
@@ -960,10 +965,12 @@ footer .logo-container {
   position: relative;
 }
 
-#name-contact-1, .form-control {
+#name-contact-1,
+.form-control {
   border: thin solid #888888;
 }
-#name-contact-1:focus, .form-control:focus {
+#name-contact-1:focus,
+.form-control:focus {
   border: thin solid #888888;
 }
 
@@ -1014,13 +1021,19 @@ footer .logo-container {
   height: 560px;
 }
 
-.contato select, .contato input.form-control, .contato textarea {
+.contato select,
+.contato input.form-control,
+.contato textarea {
   border: thin solid #888888;
 }
-.contato select:focus, .contato input.form-control:focus, .contato textarea:focus {
+.contato select:focus,
+.contato input.form-control:focus,
+.contato textarea:focus {
   border: thin solid #888888;
 }
-.contato select:hover, .contato input.form-control:hover, .contato textarea:hover {
+.contato select:hover,
+.contato input.form-control:hover,
+.contato textarea:hover {
   border: thin solid #888888;
 }
 
@@ -1234,10 +1247,12 @@ i:after {
 .navbar-default-white .white nav a {
   color: white;
 }
-.navbar-default-white img.black, .navbar-default-white .navbar-brand.white img.black {
+.navbar-default-white img.black,
+.navbar-default-white .navbar-brand.white img.black {
   display: block !important;
 }
-.navbar-default-white img.white, .navbar-default-white .navbar-brand.white img.white {
+.navbar-default-white img.white,
+.navbar-default-white .navbar-brand.white img.white {
   display: none !important;
 }
 
@@ -1247,10 +1262,12 @@ i:after {
 .no-section-image .box div::before {
   color: black;
 }
-.no-section-image img.black, .no-section-image .navbar-brand.white img.black {
+.no-section-image img.black,
+.no-section-image .navbar-brand.white img.black {
   display: none !important;
 }
-.no-section-image img.white, .no-section-image .navbar-brand.white img.white {
+.no-section-image img.white,
+.no-section-image .navbar-brand.white img.white {
   display: block !important;
 }
 
@@ -1263,12 +1280,35 @@ i:after {
 .show .social-icons-subnav span {
   color: rgb(255, 255, 255);
 }
-.show img.black, .show .navbar-brand.white img.black {
+.show img.black,
+.show .navbar-brand.white img.black {
   display: block !important;
 }
-.show img.white, .show .navbar-brand.white img.white {
+.show img.white,
+.show .navbar-brand.white img.white {
   display: none !important;
 }
 .show .box div::before {
   color: white;
+}
+
+.grid.acabamentos .grid-item {
+  flex: 0 1 25%;
+  border: none;
+  margin-bottom: 0px;
+  position: relative;
+  margin: 5px;
+}
+
+.conteudo-blog img {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-simple .blog-text span {
+  color: black;
+  display: inline;
+}
+.blog-simple .blog-text span.date-post {
+  color: #888;
 }

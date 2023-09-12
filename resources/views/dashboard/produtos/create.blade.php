@@ -48,7 +48,7 @@
                                 <select name="categoria" id="categoria" wire:model="categoria" class="block rounded-md border-gray-300 mt-1 w-full">
                                     <option value="0">Selecione uma categoria</option>
                                     @foreach ($categorias as $categoria)
-                                        <option value="{{$categoria->id}}">{{$categoria->nome}}</option>
+                                        <option value="{{$categoria->id}}">{{$categoria->titulo}}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Villagio Alumunios | Página Inicial</title>
+    <title>Villaggio Alumunios | Página Inicial</title>
     <meta content="" name="description">
     <meta content="" name="author">
     <meta content="" name="keywords">
@@ -153,13 +153,12 @@
 
                         @if($produto->compativeis)
                        
-                            @if($produto->puxadores) 
+                            @if($produto->puxadores->count() > 0) 
                             <span class="compativel">
                             <strong>Puxadores Compatíveis:</strong>
                             @foreach($produto->puxadores as $compativeis)
                             @if($compativeis->tipo == 'produto')
                             <a href="{{route('produto', $compativeis->compativel->slug)}}" target="_blank">{{$compativeis->nome}}</a>@if(!$loop->last),@endif
-
                             @else
                             {{$compativeis->nome}}@if(!$loop->last),@endif
                             @endif
@@ -373,15 +372,15 @@
     <script src="/js/app.js?v=2"></script>
     
     <script>
-     var windowWidth = $(window).width();
-       var windowHeight = $(window).height();
+    //  var windowWidth = $(window).width();
+    //    var windowHeight = $(window).height();
 
-            $(window).resize(function() {
-                if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
-                    location.reload();
-                    return;
-            }
-    });
+    //         $(window).resize(function() {
+    //             if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+    //                 location.reload();
+    //                 return;
+    //         }
+    // });
     </script>
 
     @yield('scripts')

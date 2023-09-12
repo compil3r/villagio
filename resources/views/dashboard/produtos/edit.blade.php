@@ -46,10 +46,10 @@
                             </div>
                             <div>
                                 <x-label for="categoria" :value="__('Categoria')" />
-                                <select name="categoria" id="categoria" wire:model="categoria" class="block rounded-md border-gray-300 mt-1 w-full" required value="{{$produto->categoria}}">
+                                <select name="categoria" id="categoria" wire:model="categoria" class="block rounded-md border-gray-300 mt-1 w-full" required value="{{$produto->categoria_id}}">
                                     <option value="0">Selecione uma categoria</option>
                                     @foreach ($categorias as $categoria)
-                                        <option value="{{$categoria->id}}" {{$produto->categoria == $categoria->id ? 'selected' : "" }}>{{$categoria->nome}}</option>
+                                        <option value="{{$categoria->id}}" {{$produto->categoria_id == $categoria->id ? 'selected' : "" }}>{{$categoria->titulo}}</option>
                                     @endforeach
                                 </select>
                             </div>

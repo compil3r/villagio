@@ -337,14 +337,10 @@ function onStep(n,e){
 			reveals[i].classList.remove(`fadeOut`);
 			reveals[i].classList.add(`animated`) ;
 			reveals[i].classList.add(`${reveals[i].getAttribute("data-animation")}`);
-		  } else {
-			// fadeOut reveals[i]
-			
-			
-				reveals[i].classList.remove(`animated`) ;
-				reveals[i].classList.remove(`${reveals[i].getAttribute("data-animation")}`);
-			
-			
+		  } else if(elementTop > windowHeight) {
+				// test if element is not in viewport anymore
+					reveals[i].classList.remove(`animated`);
+					reveals[i].classList.remove(`${reveals[i].getAttribute("data-animation")}`);
 		  }
 		}
 	}
